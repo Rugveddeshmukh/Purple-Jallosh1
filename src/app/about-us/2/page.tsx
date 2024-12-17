@@ -4,7 +4,7 @@ import AboutUsContent from "@/components/AboutUsTwo/AboutUsContent";
 import Cta from "@/components/Common/Cta";
 import Partner from "@/components/Common/Partner";
 import BuyTicket from "@/components/Common/BuyTicket";
-import Subscribe from "@/components/Common/StallBook";
+import Subscribe from "@/components/Common/Subscribe";
 import Footer from "@/components/Layouts/Footer";
 import WhyUs from "@/components/AboutUsTwo/WhyUs";
 
