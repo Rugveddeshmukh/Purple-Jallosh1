@@ -1,6 +1,6 @@
 import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
-import PricingTable from "@/components/Pricing/PricingTable";
+//import PricingTable from "@/components/Pricing/PricingTable";
 import Footer from "@/components/Layouts/Footer";
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
         bgImg="/images/main-bg4.jpg"
       /> 
 
-      <PricingTable /> 
+      {/*<PricingTable /> */}
  
       <Footer />
     </>
