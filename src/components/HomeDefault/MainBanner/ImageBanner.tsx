@@ -4,7 +4,7 @@ const ImageBanner = () => {
   return (
     <div style={bannerContainerStyle}>
       <img
-        src="/images/Jallosh_Web_Banner1.png" // Correct reference from the public folder
+        src="/images/Bannerimage.jpg" // Correct reference from the public folder
         alt="Event Banner"
         style={bannerImageStyle}
       />

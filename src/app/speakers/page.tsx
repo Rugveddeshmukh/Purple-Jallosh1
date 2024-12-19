@@ -10,11 +10,11 @@ export default function Page() {
 
       <PageBanner
         pageTitle="Speakers"
-        shortText="Our Team Members!"
+        shortText="Our Team Participant!"
         homePageUrl="/"
         homePageText="Home"
         activePageText="Speakers"
-        bgImg="/images/main-bg5.jpg"
+        bgImg="/images/main-bg1.jpg"
       />
 
       <SpeakersOne />

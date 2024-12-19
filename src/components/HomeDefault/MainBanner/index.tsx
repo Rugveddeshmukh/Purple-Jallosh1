@@ -94,7 +94,7 @@ const MainBanner: React.FC = () => {
       <div
         className="main-banner"
         style={{
-          backgroundImage: 'url("/images/images1.jpg")'
+          backgroundImage: 'url("/images/mainbaneer.jpg")'
         }}
       >
         <div className="d-table">
@@ -102,16 +102,16 @@ const MainBanner: React.FC = () => {
             <div className="container">
               <div className="main-banner-content">
                 <p>
-                  Are you <span>ready</span> for the magic of purple ?
+                  "Get <span>ready</span> to Embrace the Purple Vibe" 
                 </p>
                 <p
                   style={{
-                    fontSize: "25px",
+                    fontSize: "15px",
                     fontWeight: "600",
                     color: "white",
                   }}
                 >
-                  Biggest Event <br />
+                  "Inclusion is not just about accommodating differences its about embracing them and creating a world where everyone belongs."  <br />
                   <span
                     style={{
                       color: "white",
@@ -120,18 +120,20 @@ const MainBanner: React.FC = () => {
                    
                     }}
                   >
-                    PURPLE JALLOSH - 2024
+                  The Unmissable Celebration
+                  <br/>
+                   PURPLE JALLOSH - 2025
                   </span>
                   <br />
                 </p>
 
                 <ul>
                   <li>
-                    <i className="icofont-compass"></i> PCMC Divyang Bhavan
-                    Foundation
+                    <i className="icofont-compass"></i> Venue- Auto Cluster Exhibition
+                     Ground  
                   </li>
                   <li>
-                    <i className="icofont-calendar"></i> 17-19 Jan, 2024
+                    <i className="icofont-calendar"></i> 17-19 Jan, 2025
                   </li>
                 </ul>
 
@@ -200,12 +202,18 @@ const MainBanner: React.FC = () => {
               textAlign: "center",
               width: "100%",
               fontSize: "1.5rem",
+              color:"#000",
             }}
           >
             Registration Form
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+        style={{
+          background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
+          borderRadius: "10px",
+        }}
+        >
           <Form onSubmit={handleFormSubmit}>
             {/* Category */}
             <Form.Group className="mb-3 text-center">
@@ -290,9 +298,11 @@ const MainBanner: React.FC = () => {
               )
             )}
 
-            <Button variant="primary" type="submit" className="w-100">
-              Submit
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button variant="primary" type="submit" style={{ width: "40%" }}>
+               Submit
             </Button>
+            </div>
           </Form>
         </Modal.Body>
       </Modal>

@@ -5,12 +5,26 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer: React.FC = () => {
+
   return (
     <>
       <footer className="footer-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-md-6">
+        <div className="container" style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        >
+          <div className="row"style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            width: "100%",
+            gap: "20px",
+          }}
+           >
+            {/* Left Column with Map */}
+            <div style={{ flex: "1 1 300px", minWidth: "280px" }}>
               <div className="single-footer-widget">
                 <h3>Venue Location</h3>
                 <span>
@@ -18,16 +32,17 @@ const Footer: React.FC = () => {
                 </span>
 
                 <p className="location">
-                  <i className="icofont-google-map"></i>  Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,
-                  
+                  <i className="icofont-google-map"></i> Auto Cluster Exhibition
+                  Center, H-Block, Chinchwad East, 181, Old Mumbai - Pune Hwy,
+                  MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019
                 </p>
-
-                <Link href="/contact-us" className="contact-authority">
+                  <Link href="/contact-us" className="contact-authority">
                   <i className="icofont-phone"></i> Contact Our Authority
                 </Link>
               </div>
             </div>
 
+            {/* Right Column with Social Links */}
             <div className="col-lg-6 col-md-6">
               <div className="single-footer-widget">
                 <h3>Social Connection</h3>
@@ -48,15 +63,14 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                  href="https://www.youtube.com/@DivyangBhavanPCMC"
-                 className="youtube"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                          >
-                 <i className="icofont-youtube-play"></i>
+                      href="https://www.youtube.com/@DivyangBhavanPCMC"
+                      className="youtube"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="icofont-youtube-play"></i>
                     </a>
                   </li>
-
                   <li>
                     <a
                       href="https://linkedin.com/company/divyang-bhavan-pcmc"
@@ -79,39 +93,57 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
+            {/* Embedded Map */}
+           <div
+            style={{
+              flex: "1 1 300px",
+              minWidth: "280px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5601269561766!2d73.79904587471056!3d18.63884446555172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84992d04bbd%3A0x9f1c44fb853ba461!2sAuto%20Cluster%20Exhibition%20Center!5e0!3m2!1sen!2sin!4v1734504354767!5m2!1sen!2sin"
+            style={{
+            width: "100%", // Dynamic width for mobile and desktop
+            maxWidth: "400px", // Maximum width for larger screens
+            height: "250px", // Height for mobile and desktop consistency
+            border: 0,
+            borderRadius: "2px", // Optional: adds rounded corners for aesthetic
+            marginTop:"100px",
+            
+          }}
+           loading="lazy"
+          ></iframe>
+          </div>
+
+
+            {/* Footer Bottom */}
             <div className="col-lg-12">
               <div className="copyright-area">
                 <div className="logo">
                   <Link href="/">
                     <Image
                       src="/images/logofoot.png"
-                      
                       alt="logo"
                       width={120}
                       height={38}
-                      style={{backgroundColor:"white"}}
+                      style={{ backgroundColor: "white" }}
                     />
                   </Link>
                 </div>
 
                 <ul>
-                  
                   <li>
                     <Link href="/contact-us">Contact</Link>
                   </li>
                   <li>
                     <Link href="#">Register Now</Link>
                   </li>
-                 {/* <li>
-                    <Link href="/privacy-policy">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-conditions">Terms & Conditions</Link>
-                  </li> */}
                 </ul>
 
                 <p>
-                  © Powerd by{" "}
+                  © Powered by{" "}
                   <a
                     href="https://hibootstrap.com/"
                     target="_blank"

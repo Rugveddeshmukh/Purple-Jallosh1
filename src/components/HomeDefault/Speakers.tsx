@@ -7,7 +7,7 @@ import Image from "next/image";
 interface SpeakersMember {
   image: string;
   name: string;
-  designation: string;
+  //designation: string;
   //socialLinks: SocialLink[];
 }
 
@@ -19,27 +19,27 @@ interface SocialLink {
 
 const SpeakersMemberData: SpeakersMember[] = [
   {
-    image: "/images/imgaes 12.jpg",
-    name: "ABC",
-    designation: "Founder & CEO",
+    image: "/images/Bhavesh Bhatiya-modified (1).PNG",
+    name: "Bhavesh Bhatiya",
+    //designation: "",
     
   },
   {
-    image: "/images/imgaes 12.jpg",
-    name: "XYZ",
-    designation: "Lead Designer",
+    image: "/images/Bhushan Punani-modified.PNG",
+    name: "Bhushan Punani",
+    //designation: "Lead Designer",
     
   },
   {
-    image: "/images/imgaes 12.jpg",
-    name: "PQR",
-    designation: "Developer Expert",
+    image: "/images/Dhananay Bhole-modified.PNG",
+    name: "Dhananay Bhole",
+   // designation: "Developer Expert",
     
   },
   {
-    image: "/images/imgaes 12.jpg",
-    name: "BCD",
-    designation: "Senio Visual Designer",
+    image: "/images/Jaee Khamkar-modified.PNG",
+    name: "Jaee Khamkar",
+   // designation: "Senio Visual Designer",
     
   },
   
@@ -60,7 +60,7 @@ const Speakers: React.FC = () => {
 
             <div className="bg-title">Speakers</div>
 
-            <Link href="" className="btn btn-primary">
+            <Link href="/speakers" className="btn btn-primary">
               View More Speakers
             </Link>
           </div>
@@ -80,7 +80,7 @@ const Speakers: React.FC = () => {
 
                   <div className="speakers-content" style={{textAlign:'center', alignItems:'center', paddingLeft:'10px'}}>
                     <h3>{value.name}</h3>
-                    <span>{value.designation}</span>
+                  {/*  <span>{value.designation}</span>*/}
                   </div>
 
                 {/*  <ul>

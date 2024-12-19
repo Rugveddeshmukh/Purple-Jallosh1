@@ -149,6 +149,7 @@ const Navbar: React.FC = () => {
           </div>
         </nav>
       </div>
+      
       <Modal show={showModal} onHide={handleModalClose}>
         <Modal.Header closeButton>
           <Modal.Title
@@ -156,11 +157,17 @@ const Navbar: React.FC = () => {
             textAlign: "center",
             width: "100%",
             fontSize: "1.5rem",
+            color: "#000",
           }}
           >
             Registration Form</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+        style={{
+          background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
+          borderRadius: "10px",
+        }}
+        >
           <Form onSubmit={handleFormSubmit}>
             <Form.Group className="mb-3 text-center">
               <Form.Label>Select Category</Form.Label>
@@ -230,9 +237,11 @@ const Navbar: React.FC = () => {
                 </Form.Group>
               ) : null
             )}
-            <Button variant="primary" type="submit" className="w-100">
-              Submit
+            <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button variant="primary" type="submit" style={{ width: "40%" }}>
+             Submit
             </Button>
+            </div>
           </Form>
         </Modal.Body>
       </Modal>

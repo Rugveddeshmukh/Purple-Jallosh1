@@ -14,18 +14,23 @@ const AboutUsContent: React.FC = () => {
               <div className="about-content">
                 <span>Purple Fest Awaits</span>
                 <h2>
-                  EVENT NAME  <b>AND</b> SYMBOLISM
+                  WHO  <b>WE</b> ARE
                 </h2>
 
                 
-                 <li style={{fontSize:"17px"}}>The name Purple Jallosh is carefully crafted to encapsulate the events essence and goals.</li> 
-                 <li style={{fontSize:"17px"}}>PURPLE:- represents our commitment to supporting individuals with disabilities and aligns with global initiatives which raises awareness about various disabilities. </li>
-                 <li style={{fontSize:"17px"}}>Purple serves as a powerful symbol of advocacy and support for people with disabilities. It reflects a commitment to inclusivity and respect, creating a strong visual identity for the event’s focus on these issues.</li>
-                 <li style={{fontSize:"17px"}}>The color purple also signifies creativity and forward-thinking. It represents our dedication to fostering innovative solutions and celebrating diverse talents and perspectives.</li>
-                 
-                 <li style={{fontSize:"17px"}}>JALLOSH:-The term Jallosh embodies a state of intense happiness and transformative joy. It signifies our aim to create an environment where participants experience a profound sense of inspiration and accomplishment.</li>
-                 <li style={{fontSize:"17px"}}>By incorporating Jallosh we emphasize the transformative nature of the event, where attendees not only celebrate achievements but also engage in a journey of collective growth.</li>
-                 <li style={{fontSize:"17px"}}>Jallosh highlights our aspiration to generate enthusiasm and drive positive change. It reflects the events goal of uplifting and energizing participants, leaving them with a renewed sense of motivation and purpose.</li>
+                 <p>Purple Jallosh is an initiative endeavor by the Pimpri Chinchwad Municipal Corporation (PCMC) with Divyang Bhawan Foundation as its host and Inclusive Hub India (IHI) as its knowledge partner, supported by local organizations, corporates, and innovators.  
+                    Its a festival that brings together diverse stakeholders to celebrate abilities, promote inclusion, and spark impactful change. This platform empowers voices, showcases potential, and fosters connections that pave the way for a more inclusive society. </p>
+                 <br/>
+                 <p style={{ fontSize: "20px", fontWeight: "bold",color:"#000" }}>Why Attend Purple Jallosh?</p>
+                 <li style={{fontSize:"15px"}}>Unmatched Celebration:- Three days of inspiring activities, performances, and connections showcasing inclusion, assistive technologies, and stories of resilience. </li>
+                 <li style={{fontSize:"15px"}}>Inspiring Keynote Speakers:- Hear from visionaries and leaders shaping accessibility and inclusion, sharing insights and innovations empowering PwDs. </li>
+                 <li style={{fontSize:"15px"}}>Interactive Workshops:- Join hands-on workshops in universal design, assistive tech, and creative arts. Learn, collaborate, and connect with a purpose-driven community.</li>
+                 <li style={{fontSize:"15px"}}>Vibrant Performances:- Enjoy inspiring performances in music, dance, and theater by artists who break barriers through their art.</li>
+                 <li style={{fontSize:"15px"}}>Innovative Solutions:- Discover innovative solutions at the Assistive Tech Expo, showcasing smart devices and wearables designed to empower and inspire. </li>
+                 <li style={{fontSize:"15px"}}>Empowering Conversations:- Join impactful panels on inclusive education, employment, and healthcare, and contribute to actionable solutions for a better future.</li>
+                 <li style={{fontSize:"15px"}}>Family Friendly Festivities:- Purple Jallosh offers creative art corners and interactive zones for all ages. Bring your family and celebrate empowerment together!</li>
+                 <li style={{fontSize:"15px"}}>Networking Opportunities:- Connect with individuals, organizations, and professionals dedicated to inclusion—whether you're an innovator, volunteer, or leader, there's a place for you.</li>
+                 <li style={{fontSize:"15px"}}>Support Local Initiatives:- Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.</li>
                   
               </div>
             </div>

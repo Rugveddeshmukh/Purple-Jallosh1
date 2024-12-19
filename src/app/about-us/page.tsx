@@ -18,11 +18,11 @@ export default function Page() {
 
       <PageBanner 
         pageTitle="Know More About Event PURPLE JALLOSH"
-        shortText="Are you ready for the magic of purple ?
+        shortText="Are you to experience an extraordinary celebration of abilities, innovation, and joy? 
 "
         homePageUrl="/"
         homePageText="Home"
-        activePageText=" EVENT PURPLE JALLOSH"
+        activePageText=" WELCOME TO PURPLE JALLOSH-2025"
         bgImg="/images/main-bg1.jpg"
       />
 

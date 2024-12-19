@@ -45,60 +45,207 @@ const PurpleJalloshDetails: React.FC = () => {
   return (
     <div style={containerStyle}>
       <h1 style={headerStyle}>
-        Why:- Pimpri-Chinchwad Municipal Corporation (PCMC) as the host for Purple Jallosh offers strategic benefits that align perfectly with the event goals
+      Event Highlights: Discover Whats in Store
       </h1>
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Community Engagement and Reach</h2>
+        <h2 style={titleStyle}>Assistive Tech Expo</h2>
         <ul style={listStyle}>
           <li>
-            PCMCs diverse and substantial population ensures broad engagement and significant impact, allowing us to connect with a wide audience.
+          Explore cutting-edge innovations that are reshaping accessibility. From smart devices to adaptive tools, discover how technology empowers independence.
           </li>
           <li>
-            The municipality hosts a network of local organizations, NGOs, and businesses, enhancing the events support base and effectiveness.
+          Engage with live demonstrations, insightful talks, and interactive displays.
           </li>
         </ul>
       </section>
 
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Support for PWD Organizations</h2>
+        <h2 style={titleStyle}>Experience Zones</h2>
         <ul style={listStyle}>
           <li>
-            PCMC includes numerous registered PWD organizations, making it an ideal area to strengthen collaboration and relevance.
+          Step into the shoes of PwDs through immersive simulations. Feel the challenges and triumphs of navigating daily life with mobility or sensory impairments. 
           </li>
           <li>
-            PCMCs commitment to improving accessibility and inclusivity aligns with the events goals, reinforcing shared values.
+          These activities aim to foster empathy and drive meaningful conversations about inclusion.
           </li>
         </ul>
       </section>
 
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Strategic Location</h2>
+        <h2 style={titleStyle}>Abilympics</h2>
         <ul style={listStyle}>
           <li>
-            PCMCs central location in the Pune Metropolitan Region facilitates higher attendance and engagement from various areas.
+          Watch skilled PwDs compete in vocational challenges, showcasing exceptional talents in areas like technology, culinary arts, and craftsmanship. 
           </li>
           <li>
-            The municipality provides the necessary facilities and infrastructure, including venues, transportation, and accommodation.
+          Cheer on participants as they inspire with their resilience and expertise.
           </li>
         </ul>
       </section>
 
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Promoting Local Development</h2>
+        <h2 style={titleStyle}>Creative Workshops</h2>
         <ul style={listStyle}>
           <li>
-            The event will stimulate local economic activity and highlight PCMCs role in social development.
+          Participate in engaging activities like art, music, and storytelling, specially designed to nurture creativity among children with disabilities. 
           </li>
           <li>
-            Partnering with PCMC strengthens community relations and demonstrates a collaborative approach to addressing local needs, creating a positive social impact.
+          These sessions not only provide joy but also build confidence and skills.
           </li>
         </ul>
       </section>
 
-      <p style={paragraphStyle}>
-        Purple Jallosh is more than an event it is a celebration of inclusivity and joy, set in a location that embodies these values. By hosting the event in PCMC, we leverage the municipalitys strengths to drive meaningful change and foster a supportive community for all.
-      </p>
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Mainstage Performances</h2>
+        <ul style={listStyle}>
+          <li>
+          Enjoy electrifying performances by “Miracle on Wheels” and live music bands, celebrating the unyielding spirit of inclusion.  
+          </li>
+          <li>
+          Experience dance and music that redefine abilities and inspire audiences.
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Inclusive Panel Discussions</h2>
+        <ul style={listStyle}>
+          <li>
+          Join impactful dialogues on universal design, inclusive education, employment equity, and healthcare access. 
+          </li>
+          <li>
+          Led by industry leaders, these sessions explore actionable solutions for a more equitable society.
+          </li>
+        </ul>
+      </section>
+
+        <h3 style={{alignItems:"center", }}>Celebrating Community: Be a Part of the Movement</h3>
+
+         <section style={sectionStyle}>
+        <h2 style={titleStyle}>Local NGO Stalls</h2>
+        <ul style={listStyle}>
+          <li>
+          Discover inspiring initiatives led by over 20 local PwD organizations and NGOs. Network, collaborate, and learn about their impactful work. 
+          </li>
+        </ul>
+      </section>   
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Food Court</h2>
+        <ul style={listStyle}>
+          <li>
+          Relish an array of dishes prepared by womens self-help groups and PwDs, combining culinary creativity with economic empowerment. Enjoy delicious food while supporting local entrepreneurship. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Jagruti Mela</h2>
+        <ul style={listStyle}>
+          <li>
+          Access essential resources and gain insights on government schemes and services available for PwDs through one-on-one consultations and workshops. Empower yourself with knowledge that drives change. 
+          </li>
+        </ul>
+      </section>
+
+      <h4 >Registration Open For:-Join Purple Jallosh as part of a diverse and vibrant community! Registration is now open for</h4>
+
+         <section style={sectionStyle}>
+        <h2 style={titleStyle}>Assistive Tech Startups</h2>
+        <ul style={listStyle}>
+          <li>
+          Be part of the Assistive Tech Expo and showcase your game changing innovations. Network with industry leaders, investors, and end-users to propel your solutions to the next level.
+          </li>
+        </ul>
+      </section>   
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Corporate Partners</h2>
+        <ul style={listStyle}>
+          <li>
+           Highlight your organizations commitment to Diversity and Inclusion. Gain visibility, connect with changemakers, and explore impactful partnerships. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>NGO Partners</h2>
+        <ul style={listStyle}>
+          <li>
+          Share your mission, expand your reach, and collaborate with stakeholders who share your vision of inclusion and empowerment. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Individual Delegates</h2>
+        <ul style={listStyle}>
+          <li>
+          Immerse yourself in inspiring sessions, performances, and workshops. Gain insights, network with pioneers, and take-home valuable experiences. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Sponsors</h2>
+        <ul style={listStyle}>
+          <li>
+          Align your brand with a transformative cause. Showcase your support for inclusivity and innovation while reaching a diverse audience. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Speakers and Invitees</h2>
+        <ul style={listStyle}>
+          <li>
+          Lead meaningful discussions and inspire the community with your knowledge and vision for an inclusive future. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Visitors</h2>
+        <ul style={listStyle}>
+          <li>
+          Experience the vibrant atmosphere of Purple Jallosh. Witness creativity, resilience, and innovation all in one place. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Artists and Performers</h2>
+        <ul style={listStyle}>
+          <li>
+          Take center stage to celebrate talent and redefine perceptions. Showcase your artistry to a supportive and enthusiastic audience. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Event Curators</h2>
+        <ul style={listStyle}>
+          <li>
+          Bring your expertise to design and deliver impactful experiences. Be part of creating an unforgettable festival. 
+          </li>
+        </ul>
+      </section>
+
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Volunteers</h2>
+        <ul style={listStyle}>
+          <li>
+          Make a difference by supporting event operations, assisting participants, and contributing to the success of this transformative celebration. 
+          </li>
+        </ul>
+      </section>
+
+
+
+
     </div>
+
+    
   );
 };
 

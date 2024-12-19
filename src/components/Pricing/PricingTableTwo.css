@@ -156,36 +156,49 @@
     }
   }
   
-  /* For mobile phones (480px and below) */
   @media (max-width: 480px) {
+    /* Stalls */
     .stall {
-      width: 40px;
-      height: 40px;
-      font-size: 10px;
+      width: 35px;          /* Reduced width for smaller screens */
+      height: 35px;         /* Reduced height for smaller screens */
+      font-size: 10px;      /* Slightly smaller font size for better readability */
+      padding: 5px;         /* Added padding for better touch interaction */
     }
   
+    /* Grid Container */
     .grid-container {
-      gap: 10px;
-      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;      /* Allow content to wrap on smaller screens */
+      gap: 8px;             /* Smaller gap between items */
+      padding: 0 10px;      /* Adjust padding to fit mobile screens */
     }
   
+    /* Left & Right Columns */
     .left-column, .right-column {
-      gap: 5px;
-      margin-right: 10px;
-      margin-left: 10px;
+      display: flex;
+      flex-wrap: wrap;      /* Allow flex content to wrap */
+      gap: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
+      width: 48%;           /* Set width to fit in mobile screens */
     }
   
+    /* Bottom Row */
     .bottom-row {
-      margin-left: 15px; /* Reduce margin for small screens */
+      margin-left: 20px;    /* Adjust margin for better alignment */
+      width: 100%;          /* Ensure it takes the full width */
     }
   
+    /* Popup Form */
     .form-popup {
-      width: 45%; /* Slightly more width on smaller screens */
-      max-width: 45%; /* Ensure form stays within the screen */
-      padding: 10px; /* Reduce padding for smaller screens */
+      width: 80%;           /* Increased width for mobile but not too wide */
+      max-width: 90%;       /* Ensure it doesn't overflow the screen */
+      padding: 15px;        /* Increased padding for better touch interaction */
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); /* Keep perfectly centered */
+      transform: translate(-50%, -50%);  /* Keep the form centered */
+      box-sizing: border-box; /* Ensure padding doesn't overflow */
+      border-radius: 8px;   /* Slightly rounded corners */
     }
   }
   

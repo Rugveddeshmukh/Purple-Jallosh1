@@ -189,7 +189,12 @@ const EventSchedules: React.FC = () => {
           >
             Registration Form</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+        style={{
+          background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
+          borderRadius: "10px",
+        }}
+        >
           <Form onSubmit={handleFormSubmit}>
             {/* Category */}
             <Form.Group className="mb-3 text-center">
@@ -254,9 +259,11 @@ const EventSchedules: React.FC = () => {
               )
             )}
 
-            <Button variant="primary" type="submit" className="w-100">
-              Submit
-            </Button>
+             <div style={{ display: "flex", justifyContent: "center" }}>
+               <Button variant="primary" type="submit" style={{ width: "40%" }}>
+                Submit
+               </Button>
+            </div>
           </Form>
         </Modal.Body>
       </Modal>

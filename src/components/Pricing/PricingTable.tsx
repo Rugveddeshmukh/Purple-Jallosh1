@@ -1,9 +1,10 @@
 "use client";
-import React,{useState} from "react";
+import { useState, useEffect } from "react";
 
 // Define types for Stall
 interface Stall {
   id?: number;
+  title?:string;
   color: string;
 }
 
@@ -23,7 +24,8 @@ function App() {
     { id: 28, color: "yellow" },
     { id: 27, color: "yellow" },
     { id: 26, color: "yellow" },
-    { id: 25, color: "yellow" },
+    { title: "Emergency Exit", color: "white" },  // Added title for entry gate
+    { id: 25, color: "yellow" }, 
     { id: 24, color: "yellow" },
     { id: 23, color: "yellow" },
     { id: 22, color: "yellow" },
@@ -41,10 +43,10 @@ function App() {
     { id: 10, color: "yellow" },
     { id: 9, color: "yellow" },
     { id: 8, color: "yellow" },
-    { color: "black" }, // black stall has no id
     { id: 31, color: "skyblue" },
     { id: 32, color: "skyblue" },
     { id: 7, color: "skyblue" },
+    { id: 6, color: "skyblue" },
     { id: 6, color: "skyblue" },
     { id: 33, color: "green" },
     { id: 34, color: "yellow" },
@@ -64,6 +66,7 @@ function App() {
     { id: 48, color: "yellow" },
     { id: 49, color: "yellow" },
     { id: 50, color: "yellow" },
+    { title: "", color: "white" }, // Entry added her
     { id: 1, color: "yellow" },
     { id: 2, color: "yellow" },
     { id: 3, color: "yellow" },
@@ -133,7 +136,7 @@ function App() {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "calc(100% - 200px)",
+    // width: "calc(100% - 200px)",
     maxWidth: "1250px",
     margin: "0 auto",
     border: "5px solid black",
@@ -150,18 +153,51 @@ function App() {
     flexWrap: "wrap",
   };
 
+  const useWindowWidth1 = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+    useEffect(() => {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return windowWidth;
+  };
+  
   const columnStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     margin: "0 230px",
   };
+  // Mobile adjustments
+if (useWindowWidth1() < 768) {
+  columnStyle.margin = "0 30px"; // Adjust margin for mobile view
+}
+
 
   const middleSectionStyle: React.CSSProperties = {
     display: "flex",
     margin: "40px 0",
   };
 
-  const stallStyle = (color: string): React.CSSProperties => ({
+
+const useWindowWidth = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowWidth;
+};
+
+const stallStyle = (color: string): React.CSSProperties => {
+  const windowWidth = useWindowWidth();
+  
+  const baseStyle: React.CSSProperties = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -174,7 +210,21 @@ function App() {
     fontWeight: "bold",
     color: color === "black" ? "white" : "black",
     textAlign: "center",
-  });
+  };
+
+  // Mobile adjustments (width < 768px)
+  if (windowWidth < 768) {
+    return {
+      ...baseStyle,
+      width: "20px",  // Adjust width for mobile
+      height: "20px", // Adjust height for mobile
+      fontSize: "10px", // Adjust font size for mobile
+    };
+  }
+
+  return baseStyle;
+};
+
 
   return (
     <>
@@ -182,11 +232,12 @@ function App() {
       <div style={layoutContainerStyle}>
         {/* Top Yellow Stalls */}
         <div style={rowStyle}>
-          {stalls.slice(0, 23).map((stall) => (
+          {stalls.slice(0, 24).map((stall) => (
+           
             <div key={stall.id} style={stallStyle(stall.color)}
             onClick={() => handleStallClick(stall)}
             >
-              {stall.id}
+              {stall.id} {stall.title}
             </div>
           ))}
         </div>
@@ -331,7 +382,7 @@ function App() {
 
         {/* Bottom Green and Yellow Stalls */}
         <div style={rowStyle}>
-          {stalls.slice(28).map((stall, index) => (
+          {stalls.slice(29).map((stall, index) => (
             <div
               key={stall.id ?? `no-id-${index}`}
               style={stallStyle(stall.color)}
@@ -486,7 +537,31 @@ function App() {
       )}
     </>
   );
+
+  
+
 }
 
-
+<style>
+  {`
+    @media (max-width: 768px) {
+      div[style*="display: flex"] {
+        flex-direction: column;
+        gap: 10px;
+      }
+      div[style*="flex: 1 1 30%"] {
+        flex: 1 1 100%;
+      }
+      div[style*="gap: 5px"] {
+        gap: 10px;
+      }
+      div[style*="display: flex; flexDirection: column"] {
+        gap: 10px;
+      }
+      div[style*="flex-direction: column"] {
+        display: block;
+      }
+    }
+  `}
+</style>
 export default App;

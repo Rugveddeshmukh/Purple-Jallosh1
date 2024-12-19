@@ -9,19 +9,22 @@ const AboutUsContent: React.FC = () => {
         <div className="container">
           <div className="row h-100 align-items-center">
             <div className="col-lg-6">
-              <div className="about-content">
+              <div className="about-content"style={{lineHeight:'30px'}}>
                 <span>Join The Event</span>
                 <h2>
-                Know More About <b>Event </b> PURPLE JALLOSH
+               WHAT <b>IS</b> PURPLE JALLOSH
                 </h2>
 
-                <li style={{fontSize:"17px"}}>WHAT: Purple Jallosh is an event designed to celebrate inclusivity, </li>
-                <li style={{fontSize:"17px"}}>creativity, and transformative joy. It aims to bring together diverse stakeholders to foster innovation,</li>
-                <li style={{fontSize:"17px"}}>support people with disabilities, and promote a vibrant and supportive community.</li>
-                 
-                <li style={{fontSize:"17px"}}>The name Purple Jallosh is vibrant and symbolic, carrying a blend of cultural,</li>
-                <li style={{fontSize:"17px"}}>emotional, and thematic significance. Heres a deeper exploration of its essence </li>
-
+                <p > Purple Jallosh is More than just an Event; its a Movement. Purple Stands for Advocacy, Creativity, and Global Disability Awareness, 
+                  It represents a commitment to fostering an inclusive society where everyone feels valued and empowered. 
+                  <br/>
+                  Jallosh, meaning a celebration, captures the festivals joyous spirit of togetherness and achievement.
+                  <br/>
+                  Purple Jallosh is more than just an event; its a movement.
+                  <br/>
+                  This year theme: 
+                  "Purple Jallosh 2025: Celebrating Abilities, Driving Inclusion, and Redefining Possibilities"
+                </p>
                 
              {/*  <div className="signature">
                   <Image
@@ -31,6 +34,7 @@ const AboutUsContent: React.FC = () => {
                     height={68}
                   />
                 </div> */}
+                
 
                 <Link href="/about-us" className="btn btn-primary">
                   Read More
@@ -46,26 +50,20 @@ const AboutUsContent: React.FC = () => {
             <div className="col-lg-6">
               <div className="about-image">
                 <Image
-                  src="/images/image7.jpg"
+                  src="/images/whatimg1.jpg"
                   className="about-img1"
                   width={750}
                   height={500}
                   alt="about"
                 />
                 <Image
-                  src="/images/image4.jpg"
+                  src="/images/Whatsimg2.jpg"
                   className="about-img2"
                   alt="about"
                   width={309}
                   height={424}
                 />
-                <Image
-                  src="/images/shapes/5.png"
-                  className="shape-img"
-                  alt="about"
-                  width={111}
-                  height={111}
-                />
+      
 
                {/* <Link href="/" className="btn btn-primary">
                   Explore More About

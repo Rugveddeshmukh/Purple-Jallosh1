@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 interface SpeakersMember {
   image: string;
   name: string;
-  designation: string;
-  socialLinks: SocialLink[];
+  // designation: string;
+  // socialLinks: SocialLink[];
 }
 
 interface SocialLink {
@@ -19,228 +18,34 @@ interface SocialLink {
 
 const SpeakersMemberData: SpeakersMember[] = [
   {
-    image: "/images/speakers1.jpg",
-    name: "James Anderson",
-    designation: "Founder & CEO",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Raghu Degla-modified (1).png",
+    name: "Raghu Degla",
+    // designation: "Founder & CEO",
   },
   {
-    image: "/images/speakers2.jpg",
-    name: "Steven Smith",
-    designation: "Lead Designer",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Kanchan Pamnani-modified (1).png",
+    name: "Kanchan Pamnani",
+    // designation: "Lead Designer",
   },
   {
-    image: "/images/speakers3.jpg",
-    name: "Lucy Mandana",
-    designation: "Developer Expert",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Meet Arman Ali-modified (1).png",
+    name: "Meet Arman Ali",
+    // designation: "Developer Expert",
   },
   {
-    image: "/images/speakers4.jpg",
-    name: "David Warner",
-    designation: "Senio Visual Designer",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Manav Kambale (1).png",
+    name: "Manav Kambale",
+    // designation: "Senior Visual Designer",
   },
   {
-    image: "/images/speakers5.jpg",
-    name: "Alberta Amelia",
-    designation: "Lead Designer",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Nilesh-modified (1).png",
+    name: "Nilesh",
+    // designation: "Lead Designer",
   },
   {
-    image: "/images/speakers6.jpg",
-    name: "Abbie Edie",
-    designation: "Lead Designer",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
-  },
-  {
-    image: "/images/speakers7.jpg",
-    name: "Steven Garrad",
-    designation: "Developer Expert",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
-  },
-  {
-    image: "/images/speakers8.jpg",
-    name: "David Wiley",
-    designation: "Senio Visual Designer",
-    socialLinks: [
-      {
-        iconName: "icofont-facebook",
-        url: "https://facebook.com/",
-        bgColor: "#4267b2",
-      },
-      {
-        iconName: "icofont-twitter",
-        url: "https://twitter.com/",
-        bgColor: "#38A1F3",
-      },
-      {
-        iconName: "icofont-instagram",
-        url: "https://instagram.com/",
-        bgColor:
-          "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
-      },
-      {
-        iconName: "icofont-linkedin",
-        url: "https://linkedin.com/",
-        bgColor: "#0077B5",
-      },
-    ],
+    image: "/images/Taha haziq-modified (1).png",
+    name: "Taha haziq",
+    // designation: "Lead Designer",
   },
 ];
 
@@ -262,10 +67,10 @@ const SpeakersOne: React.FC = () => {
 
                   <div className="speakers-content">
                     <h3>{value.name}</h3>
-                    <span>{value.designation}</span>
+                    {/* <span>{value.designation}</span> */}
                   </div>
 
-                  <ul>
+                  {/* <ul>
                     {value.socialLinks.map((value, i) => (
                       <li key={i}>
                         <a
@@ -279,7 +84,7 @@ const SpeakersOne: React.FC = () => {
                         </a>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             ))}
