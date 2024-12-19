@@ -433,7 +433,7 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
@@ -450,7 +450,7 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
@@ -467,7 +467,7 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
@@ -483,7 +483,7 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
@@ -500,7 +500,7 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
@@ -517,33 +517,34 @@ if (useWindowWidth1() < 768) {
                   style={{
                     width: "100%",
                     padding: "10px",
-                    borderRadius: "5px",
+                    borderRadius: "10px",
                     border: "1px solid #ccc",
                   }}
                 />
               </div>
-              <button
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+               <button
                 type="submit"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  backgroundColor: "purple",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
-              >
+                 style={{
+                 width: "60%",
+                 padding: "10px",
+                 backgroundColor: "purple",
+                 color: "white",
+                 border: "none",
+                 borderRadius: "5px",
+                 cursor: "pointer",
+              }}
+               >
                 Submit
-              </button>
+               </button>
+              </div>
+               
             </form>
           </div>
         </div>
       )}
     </>
   );
-
-  
 
 }
 

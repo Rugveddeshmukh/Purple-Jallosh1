@@ -12,10 +12,10 @@ const AboutUsContent: React.FC = () => {
               <div className="about-content"style={{lineHeight:'30px'}}>
                 <span>Join The Event</span>
                 <h2>
-               WHAT <b>IS</b> PURPLE JALLOSH
+               What<b>Is</b> Purple Jallosh
                 </h2>
 
-                <p > Purple Jallosh is More than just an Event; its a Movement. Purple Stands for Advocacy, Creativity, and Global Disability Awareness, 
+                <p> Purple Jallosh is More than just an Event; its a Movement. Purple Stands for Advocacy, Creativity, and Global Disability Awareness, 
                   It represents a commitment to fostering an inclusive society where everyone feels valued and empowered. 
                   <br/>
                   Jallosh, meaning a celebration, captures the festivals joyous spirit of togetherness and achievement.

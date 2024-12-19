@@ -2,6 +2,7 @@ import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/HomeDefault/MainBanner";
 import AboutUsContent from "@/components/HomeDefault/AboutUsContent";
 import WhyUs from "@/components/Common/WhyUs";
+import WhyUs1 from "@/components/Common/WhyUs1";
 import Speakers from "@/components/HomeDefault/Speakers";
 import EventSchedules from "@/components/HomeDefault/EventSchedules";
 import FunFact from "@/components/Common/FunFact";
@@ -14,7 +15,7 @@ import Footer from "@/components/Layouts/Footer";
 import StallBooking from "@/components/HomeDefault/StallBooking/StallBook";
 import ImageBanner from "@/components/HomeDefault/MainBanner/ImageBanner";
 
-//import ImageSlider from "@/components/HomeDefault/Slider/ImageSlider";
+
 
 
 
@@ -29,13 +30,11 @@ export default function Home() {
 
       <StallBooking/>
 
-     {/*<ImageSlider/> */}
-
       <AboutUsContent />
 
       <WhyUs />
 
-      
+      <WhyUs1/>
 
       <Speakers />
 

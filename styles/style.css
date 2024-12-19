@@ -2763,18 +2763,19 @@ Page Title CSS
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: #0d1028;
+  
+  
   opacity: 0.88;
 }
 .page-title-area h1 {
-  color: #ffffff;
+  color: rgb(78, 36, 111);
   margin-bottom: 0;
   text-transform: uppercase;
   font-size: 40px;
 }
 .page-title-area span {
   display: block;
-  color: #ffffff;
+  color: #000;
   margin-top: 10px;
   font-size: 17px;
 }
@@ -2791,7 +2792,7 @@ Page Title CSS
   margin: 0 13px;
 }
 .page-title-area ul li a {
-  color: #ffffff;
+  color: #000;
 }
 .page-title-area ul li a:hover, .page-title-area ul li a:focus {
   color: #00acee;
@@ -3718,7 +3719,7 @@ Contact Us CSS
 Footer CSS
 =================================================*/
 .footer-area {
-  background-color: rgb(145,14,134);
+  background-color: rgb(78, 36, 111);
   padding-top: 120px;
 }
 

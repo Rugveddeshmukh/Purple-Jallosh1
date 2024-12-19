@@ -14,7 +14,7 @@ export default function Page() {
         homePageUrl="/"
         homePageText="Home"
         activePageText="Stallbooking"
-        bgImg="/images/main-bg4.jpg"
+        bgImg="/images/contact.jpg"
       /> 
 
       <StallA /> 

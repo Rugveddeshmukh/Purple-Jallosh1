@@ -14,7 +14,7 @@ export default function Page() {
         homePageUrl="/"
         homePageText="Home"
         activePageText="Contact Us"
-        bgImg="/images/image4.jpg"
+        bgImg="/images/contact.jpg"
       />
 
       <ContactForm />

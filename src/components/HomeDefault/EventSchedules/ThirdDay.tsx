@@ -603,6 +603,213 @@ const ThirdDay: React.FC = () => {
           </AccordionItemPanel>
         </AccordionItem>
       </Accordion>
+
+      {/* Modal for Registration Form */}
+            {showForm && (
+              <div
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  zIndex: 1000,
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    padding: "20px",
+                    borderRadius: "8px",
+                    width: "400px",
+                    maxHeight: "80vh", // Max height for the modal
+                    overflowY: "auto", // Enables scrolling within the modal if the content overflows
+                  }}
+                >
+                  
+      
+                  <h2 style={{ textAlign: "center", marginBottom: "20px", fontSize: "1.8rem" }}>
+                    Registration Form
+                  </h2>
+                  <form onSubmit={handleSubmit}>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>First Name:</label>
+                      <input
+                        type="text"
+                        required
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>Last Name:</label>
+                      <input
+                        type="text"
+                        required
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>Contact:</label>
+                      <input
+                        type="text"
+                        required
+                        name="contact"
+                        value={formData.contact}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>Email:</label>
+                      <input
+                        type="email"
+                        required
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>City:</label>
+                      <input
+                        type="text"
+                        required
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>Pincode:</label>
+                      <input
+                        type="text"
+                        required
+                        name="pincode"
+                        value={formData.pincode}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>State:</label>
+                      <input
+                        type="text"
+                        required
+                        name="state"
+                        value={formData.state}
+                        onChange={handleChange}
+                        style={{
+                          width: "100%",
+                          padding: "10px",
+                          marginTop: "0px",
+                          borderRadius: "4px",
+                          border: "1px solid #ccc",
+                        }}
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      style={{
+                        width: "100%",
+                        padding: "10px",
+                        backgroundColor: "purple",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Submit
+                    </button>
+      
+                      {/* Buttons */}
+                    <div
+                       style={{
+                       display: "flex",
+                       justifyContent: "space-around",
+                       marginTop: "10px",
+                       
+                      }}
+                      >
+                      {/* Close Button */}
+                    <button
+                       type="button"
+                       onClick={() => {
+                       setShowForm(false);
+                      }}
+                       style={{
+                       padding: "10px 20px",
+                       backgroundColor: "gray",
+                       color: "white",
+                       border: "none",
+                       borderRadius: "3px",
+                       cursor: "pointer",
+                       width: "100%",
+                      }}
+                      >
+                    Close
+                 </button>
+                 </div>
+                 </form>   
+                </div>
+              </div>
+            )}
+      
+           {/* Display QR Code after successful registration */}
+           {qrCode && (
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <h3>Registration Successful! Here is your QR Code:</h3>
+                <Image src={qrCode} alt=" QR Code" />
+              </div>
+           )}
     </>
   );
 };

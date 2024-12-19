@@ -12,35 +12,35 @@ interface WhyUs {
 
 const WhyUsData: WhyUs[] = [
   {
-    iconName: "icofont-users-alt-2",
-    title: " NETWORKING AND COLLABORATION",
-    shortText:"At Purple Jallosh, we foster collaboration for inclusive progress. Connect with like-minded organizations and leaders to build impactful partnerships that drive accessibility and inclusion for Persons with Disabilities (PwDs).",
+    iconName: "icofont-people",
+    title: "CELEBRATING DIVERSITY",
+    shortText:"Purple Jallosh celebrates resilience, diversity, and talent, showcasing the skills and stories of PwDs to inspire positivity and inclusion.",
     btnText: "Read More",
   },
   {
-    iconName: "icofont-globe",
-    title: " INFLUENCE AND LEADERSHIP ",
-    shortText:"Lead impactful discussions on accessibility, inclusion and policy at Purple Jallosh. Join leaders and changemakers to inspire action and drive systemic change for an inclusive society.",
+    iconName: "icofont-book-alt",
+    title: " CAPACITY BUILDING AND LEARNING  ",
+    shortText:"Purple Jallosh empowers individuals and organizations to adopt inclusive practices through workshops, training, and interactive sessions, promoting accessible solutions.",
     btnText: "Read More",
   },
   {
-    iconName: "icofont-users-social",
-    title: " ENHANCED COMMUNITY ENGAGEMENT ",
-    shortText: "Engage with PCMC, PwD organizations, and community leaders to strengthen ecosystems and develop solutions for accessibility, employment, education, and healthcare.",
+    iconName: "icofont-legal",
+    title: "  POLICY AND ADVOCACY DIALOGUE   ",
+    shortText: "Join policymakers, organizations, and advocates to influence inclusive policies and address systemic barriers, fostering actionable dialogue for long-term impact.",
     btnText: "Read More",
   },
   {
-    iconName: "icofont-wheelchair",
-    title: "ACCESSIBLE EVENT EXPERIENCE ",
+    iconName: "icofont-businessman",
+    title: " INCLUSIVE EMPLOYMENT OPPORTUNITIES  ",
     shortText:
-      "Demonstrate your commitment to social responsibility and inclusivity, positioning your organization as a leader in fostering support.",
+      "Bridge the employment gap for PwDs by exploring career opportunities, inclusive hiring, and skill development, connecting with employers and changemakers for sustainable solutions.",
     btnText: "Read More",
   },
   {
-    iconName: "icofont-brainstorming",
-    title: "INCLUSION AND INNOVATION ",
+    iconName: "icofont-microphone",
+    title: " RESILIENT STORIES AND PERFORMANCES  ",
     shortText:
-      "Discover innovative technologies and solutions empowering PwDs, from assistive devices to inclusive practices tackling real-world challenges.",
+      "Celebrate inclusion through stories and performances by PwDs, showcasing how opportunity, resilience, and support unlock their full potential.",
     btnText: "Read More",
   },
   

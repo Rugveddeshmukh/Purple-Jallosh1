@@ -13,7 +13,7 @@ const AboutUsContent: React.FC = () => {
             <div className="col-lg-6">
               <div className="about-content">
                 <span>Purple Fest Awaits</span>
-                <h2>
+                <h2 style={{color:"rgb(78,34,111)"}}>
                   WHO  <b>WE</b> ARE
                 </h2>
 
@@ -21,24 +21,25 @@ const AboutUsContent: React.FC = () => {
                  <p>Purple Jallosh is an initiative endeavor by the Pimpri Chinchwad Municipal Corporation (PCMC) with Divyang Bhawan Foundation as its host and Inclusive Hub India (IHI) as its knowledge partner, supported by local organizations, corporates, and innovators.  
                     Its a festival that brings together diverse stakeholders to celebrate abilities, promote inclusion, and spark impactful change. This platform empowers voices, showcases potential, and fosters connections that pave the way for a more inclusive society. </p>
                  <br/>
-                 <p style={{ fontSize: "20px", fontWeight: "bold",color:"#000" }}>Why Attend Purple Jallosh?</p>
-                 <li style={{fontSize:"15px"}}>Unmatched Celebration:- Three days of inspiring activities, performances, and connections showcasing inclusion, assistive technologies, and stories of resilience. </li>
-                 <li style={{fontSize:"15px"}}>Inspiring Keynote Speakers:- Hear from visionaries and leaders shaping accessibility and inclusion, sharing insights and innovations empowering PwDs. </li>
-                 <li style={{fontSize:"15px"}}>Interactive Workshops:- Join hands-on workshops in universal design, assistive tech, and creative arts. Learn, collaborate, and connect with a purpose-driven community.</li>
-                 <li style={{fontSize:"15px"}}>Vibrant Performances:- Enjoy inspiring performances in music, dance, and theater by artists who break barriers through their art.</li>
-                 <li style={{fontSize:"15px"}}>Innovative Solutions:- Discover innovative solutions at the Assistive Tech Expo, showcasing smart devices and wearables designed to empower and inspire. </li>
-                 <li style={{fontSize:"15px"}}>Empowering Conversations:- Join impactful panels on inclusive education, employment, and healthcare, and contribute to actionable solutions for a better future.</li>
-                 <li style={{fontSize:"15px"}}>Family Friendly Festivities:- Purple Jallosh offers creative art corners and interactive zones for all ages. Bring your family and celebrate empowerment together!</li>
-                 <li style={{fontSize:"15px"}}>Networking Opportunities:- Connect with individuals, organizations, and professionals dedicated to inclusion—whether youre an innovator, volunteer, or leader, theres a place for you.</li>
-                 <li style={{fontSize:"15px"}}>Support Local Initiatives:- Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.</li>
-                  
+                 <p style={{ fontSize: "40px", fontWeight: "bold",color:"rgb(78,34,111)" }}>WHY ATTEND PURPLE JALLOSH?</p>
+                 <p>
+                 Unmathed Celebration:- Three days of inspiring activities, performances, and connections showcasing inclusion, assistive technologies, and stories of resilience. 
+                 Inspiring Keynote Speakers:- Hear from visionaries and leaders shaping accessibility and inclusion, sharing insights and innovations empowering PwDs. 
+                 Interactive Workshops:- Join hands-on workshops in universal design, assistive tech, and creative arts. Learn, collaborate, and connect with a purpose-driven community.
+                 Vibrant Performances:- Enjoy inspiring performances in music, dance, and theater by artists who break barriers through their art.
+                 Innovative Solutions:- Discover innovative solutions at the Assistive Tech Expo, showcasing smart devices and wearables designed to empower and inspire. 
+                 Empowering Conversations:- Join impactful panels on inclusive education, employment, and healthcare, and contribute to actionable solutions for a better future.
+                 Family Friendly Festivities:- Purple Jallosh offers creative art corners and interactive zones for all ages. Bring your family and celebrate empowerment together!
+                 Networking Opportunities:- Connect with individuals, organizations, and professionals dedicated to inclusion—whether youre an innovator, volunteer, or leader, theres a place for you.
+                 Support Local Initiatives:- Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.
+                 </p>
               </div>
             </div>
 
             <div className="col-lg-6">
               <div className="about-image">
                 <Image
-                  src="/images/image7.jpg"
+                  src="/images/whatimg1.jpg"
                   className="about-img1"
                   alt="about"
                   width={750}
@@ -46,20 +47,13 @@ const AboutUsContent: React.FC = () => {
                 />
 
                 <Image
-                  src="/images/image4.jpg"
+                  src="/images/Whatsimg2.jpg"
                   className="about-img2"
                   alt="about"
                   width={309}
                   height={424}
                 />
 
-                <Image
-                  src="/images/shapes/5.png"
-                  className="shape-img"
-                  alt="about"
-                  width={111}
-                  height={111}
-                />
               </div>
             </div>
           </div>

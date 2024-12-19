@@ -7,8 +7,8 @@ const ImageBanner = () => {
       <Image
         src="/images/Bannerimage.jpg" // Correct reference from the public folder
         alt="Banner Image"
-        width={1200} // Original width
-        height={500} // Original height
+        width={800} // Original width
+        height={600} // Original height
         layout="intrinsic" //
         style={bannerImageStyle}
       />

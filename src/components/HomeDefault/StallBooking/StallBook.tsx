@@ -28,7 +28,6 @@ const StallBooking: React.FC = () => {
                 View Stalls in Hall-A <i className="icofont-double-right"></i>
               </Button>
             </Link>
-            <p className="text-muted">Click to see Layout 1</p>
           </div>
 
           {/* Hall-B Button triggers modal */}
@@ -38,7 +37,6 @@ const StallBooking: React.FC = () => {
                 View Stalls in Hall-B <i className="icofont-double-right"></i>
               </Button>
             </Link>
-            <p className="text-muted">Click to see Layout 2</p>
           </div>
         </div>
       </div>

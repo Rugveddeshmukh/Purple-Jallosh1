@@ -2,7 +2,7 @@ import React from 'react';
 
 const PurpleJalloshDetails: React.FC = () => {
   const containerStyle: React.CSSProperties = {
-    fontFamily: 'Poppins_Fallback_9d9b8c,_poppines',
+
     margin: '20px',
     lineHeight: '1.6',
     color: '#000',
@@ -10,7 +10,7 @@ const PurpleJalloshDetails: React.FC = () => {
 
   const headerStyle: React.CSSProperties = {
     textAlign: 'center',
-    color: 'purple', // Purple tone
+    color: 'rgb(78,34,111)', // Purple tone
     marginBottom: '20px',
     fontSize:'2rem',
   };
@@ -148,7 +148,7 @@ const PurpleJalloshDetails: React.FC = () => {
         </ul>
       </section>
 
-      <h4 >Registration Open For:-Join Purple Jallosh as part of a diverse and vibrant community! Registration is now open for</h4>
+      <h4 style={{color:"rgb(78,34,111)",fontSize:"1.8rem"}}>Registration Open For:-Join Purple Jallosh as part of a diverse and vibrant community! Registration is now open for</h4>
 
          <section style={sectionStyle}>
         <h2 style={titleStyle}>Assistive Tech Startups</h2>

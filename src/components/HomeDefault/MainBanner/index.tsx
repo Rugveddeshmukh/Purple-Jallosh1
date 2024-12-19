@@ -196,116 +196,91 @@ const MainBanner: React.FC = () => {
 
       {/* Registration Modal */}
       <Modal show={showModal} onHide={handleModalClose}>
-        <Modal.Header closeButton>
-          <Modal.Title
-            style={{
-              textAlign: "center",
-              width: "100%",
-              fontSize: "1.5rem",
-              color:"#000",
-            }}
-          >
-            Registration Form
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body
-           style={{
-           background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
-           borderRadius: "10px",
-           }}
-          >
-          <Form onSubmit={handleFormSubmit}>
-            {/* Category */}
-            <Form.Group className="mb-3 text-center">
-              <Form.Label>Select Category</Form.Label>
-              <div
+              <Modal.Header closeButton>
+                <Modal.Title
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: "20px",
-                  marginTop: "10px",
+                  textAlign: "center",
+                  width: "100%",
+                  fontSize: "1.5rem",
+                  color: "#000",
+                  
                 }}
+                >
+                  Registration Form</Modal.Title>
+              </Modal.Header>
+              <Modal.Body
+              style={{
+                background: "linear-gradient(to bottom, )", // Matching the blue gradient
+                borderRadius: "10px",
+              }}
               >
-                <Form.Check
-                  type="radio"
-                  label="Visitor"
-                  name="category"
-                  value="Visitor"
-                  checked={formData.category === "Visitor"}
+                <Form onSubmit={handleFormSubmit}>
+                <Form.Group className="mb-3 text-center" >
+                 <Form.Label>I am Registering As</Form.Label>
+                 <Form.Select
+                  name="category" style={{border:"1px Solid grey" ,borderRadius:"7px"}}
+                  value={formData.category}
                   onChange={handleInputChange}
-                />
-                <Form.Check
-                  type="radio"
-                  label="NGO/SCHOOL"
-                  name="category"
-                  value="NGO/SCHOOL"
-                  checked={formData.category === "NGO/SCHOOL"}
-                  onChange={handleInputChange}
-                />
-                <Form.Check
-                  type="radio"
-                  label="Delegate"
-                  name="category"
-                  value="Delegate"
-                  checked={formData.category === "Delegate"}
-                  onChange={handleInputChange}
-                />
-              </div>
-              {errors.category && (
-                <small className="text-danger">{errors.category}</small>
-              )}
-            </Form.Group>
-
-            {/* Purpose */}
-            <Form.Group className="mb-3">
-              <Form.Label>Purpose</Form.Label>
-              <Form.Select
-                name="Purpose"
-                value={formData.Purpose}
-                onChange={handleInputChange}
-              >
-                <option value="">Select Purpose</option>
-                <option value="Visitor to enjoy Purple Jallosh">
-                  Visitor to enjoy Purple Jallosh
-                </option>
-                <option value="School/NGO to participate in Purple Jallosh">
-                  School/NGO to participate in Purple Jallosh
-                </option>
-                <option value="Delegate Event Guest">
-                  Delegate Event Guest
-                </option>
-              </Form.Select>
-              {errors.Purpose && (
-                <small className="text-danger">{errors.Purpose}</small>
-              )}
-            </Form.Group>
-
-            {/* Other Input Fields */}
-            {["FullName", "Contact", "Email", "City", "PinCode", "State", "Message"].map(
-              (field) => (
-                <Form.Group className="mb-3" key={field}>
-                  <Form.Control
-                    type="text"
-                    placeholder={field.replace(/([A-Z])/g, " $1")}
-                    name={field}
-                    value={formData[field as keyof typeof formData]}
-                    // onChange={handleInputChange}
-                  />
-                  {errors[field] && (
-                    <small className="text-danger">{errors[field]}</small>
+                  >
+                  <option value="">Select Category </option>
+                  <option value="Delegate (Professional/Corporate Representative)">Delegate (Professional/Corporate Representative)</option>
+                  <option value="Educational Institution Representative">Educational Institution Representative</option>
+                  <option value="Healthcare Professional">Healthcare Professional</option>
+                  <option value="Media/Influencer">Media/Influencer</option>
+                  <option value="NGO/School Representative">NGO/School Representative</option>
+                  <option value="Parent or Caregiver">Parent or Caregiver</option>
+                  <option value="Visitor">Visitor</option>
+                 </Form.Select>
+                 {errors.category && (
+                   <small className="text-danger">{errors.category}</small>
+                   )}
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Purpose</Form.Label>
+                    <Form.Select
+                      name="Purpose" style={{border:"1px Solid grey" ,borderRadius:"7px"}}
+                      value={formData.Purpose}
+                      onChange={handleInputChange}
+                    >
+                      <option value="">Select Purpose</option>
+                      <option value="Learn about Accessibilty and Inclusion">
+                      Learn about Accessibilty and Inclusion
+                      </option>
+                      <option value="Media Coverage">
+                      Media Coverage
+                      </option>
+                      <option value="Network and Collaborate">Network and Collaborate</option>
+                      <option value="Participate in Workshops and experince zones">Participate in Workshops and experince zones</option>
+                      <option value="Volunteer">Volunteer</option>
+                    </Form.Select>
+                    {errors.Purpose && (
+                      <small className="text-danger">{errors.Purpose}</small>
+                    )}
+                  </Form.Group>
+                  {Object.keys(formData).map((field) =>
+                    field !== "category" && field !== "Purpose" ? (
+                      <Form.Group className="mb-3" key={field}>
+                        <Form.Control
+                          type="text" style={{border:"1px Solid grey" ,borderRadius:"5px"}}
+                          placeholder={field.replace(/([A-Z])/g, " $1")}
+                          name={field}
+                          value={formData[field as keyof typeof formData]}
+                          // onChange={handleInputChange}
+                        />
+                        {errors[field] && (
+                          <small className="text-danger">{errors[field]}</small>
+                        )}
+                      </Form.Group>
+                    ) : null
                   )}
-                </Form.Group>
-              )
-            )}
-
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Button variant="primary" type="submit" style={{ width: "40%" }}>
-               Submit
-            </Button>
-            </div>
-          </Form>
-        </Modal.Body>
-      </Modal>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Button variant="primary" type="submit" style={{ width: "40%" }}>
+                   Submit
+                  </Button>
+                  </div>
+                </Form>
+              </Modal.Body>
+            </Modal>
     </>
   );
 };
