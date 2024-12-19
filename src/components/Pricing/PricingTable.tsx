@@ -182,52 +182,50 @@ if (useWindowWidth1() < 768) {
   };
 
 
+  const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth] = useState<number>(0);
   
-
-const useWindowWidth = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowWidth;
-};
-
-const StallStyle = (color: string): React.CSSProperties => {
-  const windowWidth = useWindowWidth();
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        handleResize(); // Set initial window width
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }
+    }, []);
   
-  const baseStyle: React.CSSProperties = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    border: "1px solid black",
-    borderRadius: "4px",
-    fontSize: "12px",
-    width: "50px",
-    height: "50px",
-    backgroundColor: color,
-    fontWeight: "bold",
-    color: color === "black" ? "white" : "black",
-    textAlign: "center",
+    return windowWidth;
   };
-
-  // Mobile adjustments (width < 768px)
-  if (windowWidth < 768) {
-    return {
-      ...baseStyle,
-      width: "20px",  // Adjust width for mobile
-      height: "20px", // Adjust height for mobile
-      fontSize: "10px", // Adjust font size for mobile
+  
+  const StallStyle = (color: string): React.CSSProperties => {
+    const windowWidth = useWindowWidth();
+  
+    const baseStyle: React.CSSProperties = {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "1px solid black",
+      borderRadius: "4px",
+      fontSize: "12px",
+      width: "50px",
+      height: "50px",
+      backgroundColor: color,
+      fontWeight: "bold",
+      color: color === "black" ? "white" : "black",
+      textAlign: "center",
     };
-  }
-
-  return baseStyle;
-};
-
-
+  
+    if (windowWidth < 768) {
+      return {
+        ...baseStyle,
+        width: "20px",
+        height: "20px",
+        fontSize: "10px",
+      };
+    }
+  
+    return baseStyle;
+  };
   return (
     <>
       <h1 style={{ textAlign: "center", color: "#000" }}>Stall Booking Hall A</h1>
