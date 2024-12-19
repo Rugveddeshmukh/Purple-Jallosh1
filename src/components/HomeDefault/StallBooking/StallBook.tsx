@@ -23,7 +23,7 @@ const StallBooking: React.FC = () => {
 
           {/* Hall-A Link to Another Page */}
           <div className="col-md-4 d-flex flex-column align-items-center">
-            <Link href="/pricing" passHref>
+            <Link href="" passHref>
               <Button variant="primary" className="mb-2">
                 View Stalls in Hall-A <i className="icofont-double-right"></i>
               </Button>
