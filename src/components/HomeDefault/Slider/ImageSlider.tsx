@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 // Define the image paths relative to the public folder
@@ -48,7 +49,7 @@ const ImageSlider: React.FC = () => {
         overflow: "hidden", // Hide overflowing content
       }}
     >
-      <img
+      <Image
         src={images[currentIndex]}
         alt="slider"
         style={{

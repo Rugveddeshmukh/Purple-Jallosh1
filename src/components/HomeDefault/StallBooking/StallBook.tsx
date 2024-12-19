@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Link from "next/link"; // Import Link for navigation
@@ -49,7 +49,7 @@ const StallBooking: React.FC = () => {
           <Modal.Title>Stall Layout</Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center">
-          <img src={modalImage} alt="Stall Layout" className="img-fluid" />
+          <Image src={modalImage} alt="Stall Layout" className="img-fluid" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

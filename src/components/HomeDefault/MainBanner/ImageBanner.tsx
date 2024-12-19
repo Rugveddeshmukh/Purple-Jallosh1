@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 const ImageBanner = () => {
   return (
     <div style={bannerContainerStyle}>
-      <img
+      <Image
         src="/images/Bannerimage.jpg" // Correct reference from the public folder
         alt="Event Banner"
         style={bannerImageStyle}
