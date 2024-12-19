@@ -182,6 +182,8 @@ if (useWindowWidth1() < 768) {
   };
 
 
+  
+
 const useWindowWidth = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -194,7 +196,7 @@ const useWindowWidth = () => {
   return windowWidth;
 };
 
-const stallStyle = (color: string): React.CSSProperties => {
+const StallStyle = (color: string): React.CSSProperties => {
   const windowWidth = useWindowWidth();
   
   const baseStyle: React.CSSProperties = {
@@ -234,7 +236,7 @@ const stallStyle = (color: string): React.CSSProperties => {
         <div style={rowStyle}>
           {stalls.slice(0, 24).map((stall) => (
            
-            <div key={stall.id} style={stallStyle(stall.color)}
+            <div key={stall.id} style={StallStyle(stall.color)}
             onClick={() => handleStallClick(stall)}
             >
               {stall.id} {stall.title}
@@ -247,7 +249,7 @@ const stallStyle = (color: string): React.CSSProperties => {
           {/* Left Blue Stalls */}
           <div style={columnStyle}>
             {stalls.slice(24, 26).map((stall) => (
-              <div key={stall.id} style={stallStyle(stall.color)}
+              <div key={stall.id} style={StallStyle(stall.color)}
               onClick={() => handleStallClick(stall)}
               >
                 {stall.id}
@@ -261,7 +263,7 @@ const stallStyle = (color: string): React.CSSProperties => {
             <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(0, 3).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -270,7 +272,7 @@ const stallStyle = (color: string): React.CSSProperties => {
               </div>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(3, 6).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -283,7 +285,7 @@ const stallStyle = (color: string): React.CSSProperties => {
             <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(6, 8).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -292,7 +294,7 @@ const stallStyle = (color: string): React.CSSProperties => {
               </div>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(8, 10).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -305,7 +307,7 @@ const stallStyle = (color: string): React.CSSProperties => {
             <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(10, 12).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -314,7 +316,7 @@ const stallStyle = (color: string): React.CSSProperties => {
               </div>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(12, 14).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -327,7 +329,7 @@ const stallStyle = (color: string): React.CSSProperties => {
             <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(14, 16).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -336,7 +338,7 @@ const stallStyle = (color: string): React.CSSProperties => {
               </div>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(16, 18).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -349,7 +351,7 @@ const stallStyle = (color: string): React.CSSProperties => {
             <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(18, 20).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -358,7 +360,7 @@ const stallStyle = (color: string): React.CSSProperties => {
               </div>
               <div style={{ display: "flex", gap: "5px" }}>
                 {innerStalls.slice(20, 22).map((stall) => (
-                  <div key={stall.id} style={stallStyle(stall.color)}
+                  <div key={stall.id} style={StallStyle(stall.color)}
                   onClick={() => handleStallClick(stall)}
                   >
                     {stall.id}
@@ -371,7 +373,7 @@ const stallStyle = (color: string): React.CSSProperties => {
           {/* Right Blue Stalls */}
           <div style={columnStyle}>
             {stalls.slice(26, 28).map((stall) => (
-              <div key={stall.id} style={stallStyle(stall.color)}
+              <div key={stall.id} style={StallStyle(stall.color)}
               onClick={() => handleStallClick(stall)}
               >
                 {stall.id}
@@ -385,7 +387,7 @@ const stallStyle = (color: string): React.CSSProperties => {
           {stalls.slice(29).map((stall, index) => (
             <div
               key={stall.id ?? `no-id-${index}`}
-              style={stallStyle(stall.color)}
+              style={StallStyle(stall.color)}
               onClick={() => handleStallClick(stall)}
             >
               {stall.id || ""}
