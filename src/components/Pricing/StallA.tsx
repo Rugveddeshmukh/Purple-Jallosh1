@@ -154,12 +154,17 @@ function App() {
   };
 
   const useWindowWidth1 = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
   
     useEffect(() => {
-      const handleResize = () => setWindowWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+      // Check if window is available (i.e., running in the browser)
+      if (typeof window !== "undefined") {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        handleResize(); // Set initial window width
+        window.addEventListener("resize", handleResize);
+        
+        return () => window.removeEventListener("resize", handleResize);
+      }
     }, []);
   
     return windowWidth;
