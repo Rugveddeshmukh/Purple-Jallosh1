@@ -209,11 +209,11 @@ const MainBanner: React.FC = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
-        style={{
-          background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
-          borderRadius: "10px",
-        }}
-        >
+           style={{
+           background: "linear-gradient(to bottom, #4A90E2, #B3DDF2)", // Matching the blue gradient
+           borderRadius: "10px",
+           }}
+          >
           <Form onSubmit={handleFormSubmit}>
             {/* Category */}
             <Form.Group className="mb-3 text-center">

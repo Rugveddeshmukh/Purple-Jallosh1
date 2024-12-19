@@ -6,7 +6,10 @@ const ImageBanner = () => {
     <div style={bannerContainerStyle}>
       <Image
         src="/images/Bannerimage.jpg" // Correct reference from the public folder
-        alt="Event Banner"
+        alt="Banner Image"
+        width={1200} // Original width
+        height={500} // Original height
+        layout="intrinsic" //
         style={bannerImageStyle}
       />
     </div>
