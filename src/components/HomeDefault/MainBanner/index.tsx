@@ -102,7 +102,7 @@ const MainBanner: React.FC = () => {
             <div className="container">
               <div className="main-banner-content">
                 <p>
-                  "Get <span>ready</span> to Embrace the Purple Vibe" 
+                  Get <span>ready</span> to Embrace the Purple Vibe
                 </p>
                 <p
                   style={{
@@ -111,7 +111,7 @@ const MainBanner: React.FC = () => {
                     color: "white",
                   }}
                 >
-                  "Inclusion is not just about accommodating differences its about embracing them and creating a world where everyone belongs."  <br />
+                  Inclusion is not just about accommodating differences its about embracing them and creating a world where everyone belongs  <br />
                   <span
                     style={{
                       color: "white",

@@ -29,7 +29,7 @@ const AboutUsContent: React.FC = () => {
                  <li style={{fontSize:"15px"}}>Innovative Solutions:- Discover innovative solutions at the Assistive Tech Expo, showcasing smart devices and wearables designed to empower and inspire. </li>
                  <li style={{fontSize:"15px"}}>Empowering Conversations:- Join impactful panels on inclusive education, employment, and healthcare, and contribute to actionable solutions for a better future.</li>
                  <li style={{fontSize:"15px"}}>Family Friendly Festivities:- Purple Jallosh offers creative art corners and interactive zones for all ages. Bring your family and celebrate empowerment together!</li>
-                 <li style={{fontSize:"15px"}}>Networking Opportunities:- Connect with individuals, organizations, and professionals dedicated to inclusion—whether you're an innovator, volunteer, or leader, there's a place for you.</li>
+                 <li style={{fontSize:"15px"}}>Networking Opportunities:- Connect with individuals, organizations, and professionals dedicated to inclusion—whether youre an innovator, volunteer, or leader, theres a place for you.</li>
                  <li style={{fontSize:"15px"}}>Support Local Initiatives:- Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.</li>
                   
               </div>

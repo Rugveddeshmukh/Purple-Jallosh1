@@ -20,10 +20,9 @@ const AboutUsContent: React.FC = () => {
                   <br/>
                   Jallosh, meaning a celebration, captures the festivals joyous spirit of togetherness and achievement.
                   <br/>
-                  Purple Jallosh is more than just an event; its a movement.
+                  Purple Jallosh is more than just an event its a movement.
                   <br/>
-                  This year theme: 
-                  "Purple Jallosh 2025: Celebrating Abilities, Driving Inclusion, and Redefining Possibilities"
+                  This year theme: Purple Jallosh 2025: Celebrating Abilities, Driving Inclusion, and Redefining Possibilities
                 </p>
                 
              {/*  <div className="signature">
