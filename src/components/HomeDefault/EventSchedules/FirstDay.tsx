@@ -10,7 +10,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import Image from "next/image";
-import emailjs from "emailjs-com";
+
 
 const FirstDay: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
@@ -35,33 +35,30 @@ const FirstDay: React.FC = () => {
     pincode: "",
     state: "",
   });
-
-  const generateQRCode = (text: string) => {
-    return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
-      text
-    )}&size=150x150`;
-  };
+  const [result, setResult] = React.useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target as HTMLFormElement);
 
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
-        formData, // Data you want to send in the email
-        "your_user_id" // Replace with your EmailJS user ID
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-          setQrCode(generateQRCode("Thank you for registering!")); // Show QR Code
+    formData.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+       console.log (result)
           setBookingLimitActivity1((prevLimit) => prevLimit - 1); // Reduce count for Activity 1
           setBookingLimitActivity2((prevLimit) => prevLimit - 1); // Reduce count for Activity 2
           setBookingLimitActivity3((prevLimit) => prevLimit - 1); // Reduce count for Activity 3
@@ -70,12 +67,11 @@ const FirstDay: React.FC = () => {
           setBookingLimitActivity6((prevLimit) => prevLimit - 1); // Reduce count for Activity 6
 
           setShowForm(false); // Close the modal
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-        }
-      );
-   
+     // event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
 
   return (
@@ -86,7 +82,7 @@ const FirstDay: React.FC = () => {
             <AccordionItemButton>
               <div className="author">
               <Image
-                  src="/images/dummy images.png"
+                  src="/images/logonav.png"
                   title="BCD"
                   alt="Author"
                   width={150}
@@ -95,7 +91,7 @@ const FirstDay: React.FC = () => {
               </div>
 
               <div className="schedule-info">
-                <h3>EVENT SCHEDULE 1 DAY</h3>
+                <h3>EVENT SCHEDULE DAY 1</h3>
 
                 <ul>
                   <li>
@@ -111,14 +107,14 @@ const FirstDay: React.FC = () => {
           </AccordionItemHeading>
 
           <AccordionItemPanel>
-            <li>	10:00 AM - 11:00 AM:  Opening Ceremony </li>
-            <li>	11:00 AM - 05:00 PM:  Assistive Tech Expo and Experience Zones</li>
-            <li>	11:00 AM - 05:00 PM:  Local NGO Stalls and Jagruti Mela</li>
-            <li>	12:00 AM - 04:00 PM:  Aids and Assistive Devices Distribution</li>
-            <li>	01:00 PM - 02:00 PM:  Lunch Break</li>
-            <li>	01:00 AM - 05:00 PM:  Creative Workshops for Children with Disabilities</li>
-            <li>	02:00 AM - 03:30 PM:  Panel Discussions</li>
-            <li>	05:00 PM - 06:00 PM:  Special School Performancess</li>
+            <li>	10:00 AM - 11:00 AM:  Opening Ceremony </li>
+            <li>	11:00 AM - 05:00 PM:  Assistive Tech Expo and Experience Zones</li>
+            <li>	11:00 AM - 05:00 PM:  Local NGO Stalls and Jagruti Mela</li>
+            <li>	12:00 AM - 04:00 PM:  Aids and Assistive Devices Distribution</li>
+            <li>	01:00 PM - 02:00 PM:  Lunch Break</li>
+            <li>	01:00 AM - 05:00 PM:  Creative Workshops for Children with Disabilities</li>
+            <li>	02:00 AM - 03:30 PM:  Panel Discussions</li>
+            <li>	05:00 PM - 06:00 PM:  Special School Performancess</li>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
@@ -626,7 +622,7 @@ const FirstDay: React.FC = () => {
             <h2 style={{ textAlign: "center", marginBottom: "20px", fontSize: "1.8rem" }}>
               Registration Form
             </h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={onSubmit}>
               <div style={{ marginBottom: "15px" }}>
                 <label>First Name:</label>
                 <input
@@ -760,7 +756,7 @@ const FirstDay: React.FC = () => {
               >
                 Submit
               </button>
-
+              
                 {/* Buttons */}
               <div
                  style={{
@@ -788,11 +784,13 @@ const FirstDay: React.FC = () => {
                 >
               Close
            </button>
+
            </div>
            </form>   
+          
           </div>
         </div>
-      )}
+      )} 
 
       {/* Display QR Code after successful registration */}
       {qrCode && (

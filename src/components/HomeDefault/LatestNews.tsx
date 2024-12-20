@@ -19,9 +19,9 @@ const LatestNews: React.FC = () => {
 
             <div className="bg-title">Blog</div>
 
-            <Link href="" className="btn btn-primary">
+            {/* <Link href="" className="btn btn-primary">
               View All News
-            </Link>
+            </Link> */}
 
             <div className="bar"></div>
           </div>
@@ -54,33 +54,34 @@ const LatestNews: React.FC = () => {
               <SwiperSlide className="col-lg-12 col-md-12">
                 <div className="single-blog-post">
                   <div className="blog-image">
-                    <Link href="/blog/details">
+                    <Link href="">
                       <Image
-                        src="/images/blog1.1.jpg"
+                        src="/images/news1.jpg"
                         alt="blog"
                         width={800}
                         height={550}
                       />
                     </Link>
 
-                    <div className="post-tag">
+                    {/* <div className="post-tag">
                       <Link href="/blog/details">DBF</Link>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="blog-post-content">
-                    <span className="date">25 Feb, 2024</span>
+                    <span className="date">15 November 2024</span>
                     <h3>
-                      <Link href="/blog/details">
-                        The Most Popular News
+                      <Link href="">
+                       Visit by Shri Sachindra Pratap Singh 
                       </Link>
                     </h3>
                     <p>
-                    Pcmc Divyang Bhavan Foundation, Jagtik karnbahdhir Din celebration
+                    Shri Sachindra Pratap Singh, Secretary, DEPwD, Maharashtra State, visited DBF. During his visit, a detailed presentation on DBF and the Purple Jallosh event was given, which he greatly appreciated. The meeting was also attended by Shri Pravin Puri, State Commissioner for PwD Maharashtra, and Shri Omprakash Deshmukh, Managing Director of DBF.
+
                     </p>
-                    <Link href="/blog/details" className="read-more-btn">
+                    {/* <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -88,34 +89,34 @@ const LatestNews: React.FC = () => {
               <SwiperSlide className="col-lg-12 col-md-12">
                 <div className="single-blog-post">
                   <div className="blog-image">
-                    <Link href="/blog/details">
+                    <Link href="">
                       <Image
-                        src="/images/blog1.2.jpg"
+                        src="/images/news2.jpg"
                         alt="blog"
                         width={800}
                         height={550}
                       />
                     </Link>
 
-                    <div className="post-tag">
+                    {/* <div className="post-tag">
                       <Link href="/blog/details">DBF</Link>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="blog-post-content">
-                    <span className="date">27 Feb, 2024</span>
+                    <span className="date">22 October 2024</span>
                     <h3>
-                      <Link href="/blog/details">
-                        The Best Direction guidance
+                      <Link href="">
+                       Stakeholders Meeting for Purple Jallosh
                       </Link>
                     </h3>
                     <p>
-                    PCMC Divyang Bhavan Foundation, Direction guidance for PwDs
-14 Nov 2024
+                    A meeting gathered representatives from special schools, shared workshops, and rehabilitation centers in the PCMC area to discuss the upcoming Purple Jallosh event. Shri Omprakash Deshmukh, Managing Director of DBF, presided alongside advisors Shri Vijay Kanhekar and Shri Abhijit Murugkar, with CEO Paresh Gandhi emphasizing its significance.
+
                     </p>
-                    <Link href="/blog/details" className="read-more-btn">
+                    {/* <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -123,68 +124,67 @@ const LatestNews: React.FC = () => {
               <SwiperSlide className="col-lg-12 col-md-12">
                 <div className="single-blog-post">
                   <div className="blog-image">
-                    <Link href="/blog/details">
+                    <Link href="">
                       <Image
-                        src="/images/blog1.3.jpg"
+                        src="/images/news3.jpg"
                         alt="blog"
                         width={800}
                         height={550}
                       />
                     </Link>
 
-                    <div className="post-tag">
+                    {/* <div className="post-tag">
                       <Link href="/blog/details">DBF</Link>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="blog-post-content">
-                    <span className="date">4 Oct 2024</span>
+                    <span className="date">18 December 2024</span>
                     <h3>
-                      <Link href="/blog/details">
-                      Jagtik Karnbadheer Divas
+                      <Link href="">
+                       Address by Shri Pravin Puri to Parents of Children with Disabilities   
                       </Link>
                     </h3>
                     <p>
-                    Programs organized in the occasion of &quot;Jagtik Karnbadheer Divas&quot; at PCMC Divyang Bhavn 
+                    Shri Pravin Puri, Hon. Commissioner for PwDs Maharashtra State, addressed parents of children with disabilities in the PCMC area. The event, aimed at stakeholders, highlighted the significance of the upcoming Purple Jallosh, fostering awareness and collaboration to drive inclusivity and better opportunities.
 
                     </p>
-                    <Link href="/blog/details" className="read-more-btn">
+                    {/* <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="col-lg-12 col-md-12">
                 <div className="single-blog-post">
                   <div className="blog-image">
-                    <Link href="/blog/details">
+                    <Link href="">
                       <Image
-                        src="/images/blog1.3.jpg"
+                        src="/images/news4.jpg"
                         alt="blog"
                         width={800}
                         height={550}
                       />
                     </Link>
 
-                    <div className="post-tag">
+                    {/* <div className="post-tag">
                       <Link href="/blog/details">DBF</Link>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="blog-post-content">
-                    <span className="date">4 Oct 2024</span>
+                    <span className="date">11 December 2024</span>
                     <h3>
                       <Link href="/blog/details">
-                      Jagtik Karnbadheer Divas
+                       UPSC Trainee Officers Visit DBF
                       </Link>
                     </h3>
                     <p>
-                    Programs organized in the occasion of &quot;Jagtik Karnbadheer&quot; Divas at PCMC Divyang Bhavn 
-
+                    UPSC trainee officers from YASHADA attended an orientation session at DBF, where they were introduced to the organization's activities and initiatives. The session also highlighted the significance of the upcoming Purple Jallosh event, fostering awareness and engagement with efforts towards inclusivity and empowerment for Persons with Disabilities (PwDs).
                     </p>
-                    <Link href="/blog/details" className="read-more-btn">
+                    {/* <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -199,7 +199,7 @@ const LatestNews: React.FC = () => {
                         width={800}
                         height={550}
                       />
-                    </Link>
+                    </Link> 
 
                     <div className="post-tag">
                       <Link href="/blog/details">IT</Link>

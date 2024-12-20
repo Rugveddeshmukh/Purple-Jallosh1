@@ -8,24 +8,24 @@ interface FunFact {
 
 const FunFactData: FunFact[] = [
   {
-    iconName: "icofont-focus",
+    iconName: "icofont-rocket",
     number: "40",
-    text: "Total Topics",
+    text: "Assistive Tech Start-Ups",
   },
   {
-    iconName: "icofont-microphone",
-    number: "20",
-    text: "Total Speakers",
+    iconName: "icofont-business-man",
+    number: "10+",
+    text: "Corporates",
   },
   {
-    iconName: "icofont-copy",
-    number: "50",
-    text: "Sponsors",
+    iconName: "icofont-handshake-deal",
+    number: "10",
+    text: "NGOs ",
   },
   {
-    iconName: "icofont-users-social",
-    number: "99",
-    text: "Total Attendance",
+    iconName: "icofont-group",
+    number: "10",
+    text: "Panel Discussion And Conferences ",
   },
 ];
 

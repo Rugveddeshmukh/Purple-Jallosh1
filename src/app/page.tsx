@@ -7,7 +7,7 @@ import Speakers from "@/components/HomeDefault/Speakers";
 import EventSchedules from "@/components/HomeDefault/EventSchedules";
 import FunFact from "@/components/Common/FunFact";
 //import Pricing from "@/components/HomeDefault/Pricing";
-import Partner from "@/components/Common/Partner";
+//import Partner from "@/components/Common/Partner";
 import LatestNews from "@/components/HomeDefault/LatestNews";
 //import BuyTicket from "@/components/Common/BuyTicket";
 //import Subscribe from "@/components/Common/Subscribe";
@@ -44,7 +44,7 @@ export default function Home() {
 
      {/*<Pricing /> */}
 
-      <Partner />
+      {/* <Partner /> */}
 
       <LatestNews />
 

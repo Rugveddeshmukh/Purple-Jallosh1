@@ -118,9 +118,7 @@ const PurpleJalloshDetails: React.FC = () => {
           </li>
         </ul>
       </section>
-
-        <h3 style={{alignItems:"center", }}>Celebrating Community: Be a Part of the Movement</h3>
-
+      
          <section style={sectionStyle}>
         <h2 style={titleStyle}>Local NGO Stalls</h2>
         <ul style={listStyle}>
@@ -148,7 +146,7 @@ const PurpleJalloshDetails: React.FC = () => {
         </ul>
       </section>
 
-      <h4 style={{color:"rgb(78,34,111)",fontSize:"1.8rem"}}>Registration Open For:-Join Purple Jallosh as part of a diverse and vibrant community! Registration is now open for</h4>
+      <h4 style={{color:"rgb(78,34,111)",fontSize:"1.8rem",textAlign: 'center',}} >Join Purple Jallosh as part of a diverse and vibrant community! </h4>
 
          <section style={sectionStyle}>
         <h2 style={titleStyle}>Assistive Tech Startups</h2>

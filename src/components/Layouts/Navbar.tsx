@@ -20,11 +20,11 @@ const Navbar: React.FC = () => {
     City: "",
     PinCode: "",
     State: "",
-    Purpose: "",
     Message: "",
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [resultMessage, setResultMessage] = useState<string>("");
 
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -53,15 +53,31 @@ const Navbar: React.FC = () => {
     return errors;
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit =  async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-    } else {
-      console.log("Form submitted:", formData);
-      alert("Registration successful!");
-      setFormData({
+      return;
+    }
+     // Web3Forms API submission
+    const form = new FormData();
+    form.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320");
+    Object.entries(formData).forEach(([key, value]) =>
+      form.append(key, value)
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage("Registration successful! Email sent.");
+        setFormData({
         category: "",
         FullName: "",
         Contact: "",
@@ -69,12 +85,18 @@ const Navbar: React.FC = () => {
         City: "",
         PinCode: "",
         State: "",
-        Purpose: "",
         Message: "",
       });
       setErrors({});
       handleModalClose();
     }
+    else {
+      setResultMessage("Failed to send email. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    setResultMessage("An error occurred. Please try again.");
+  }
   };
 
   useEffect(() => {
@@ -100,7 +122,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div id="navbar" className="elkevent-nav" style={{height:"130px", backgroundColor:"#F4E3FF"}}>
+      <div id="navbar" className="elkevent-nav" style={{height:"130px", backgroundColor:"#fff"}}>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
             <Link href="/" className="navbar-brand">
@@ -141,7 +163,7 @@ const Navbar: React.FC = () => {
                       onClick={handleModalOpen}
                       className="btn btn-primary"
                     >
-                      Register Now
+                      REGISTER NOW
                     </button>
                   </li>
                 </ul>
@@ -191,28 +213,6 @@ const Navbar: React.FC = () => {
              <small className="text-danger">{errors.category}</small>
              )}
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Purpose</Form.Label>
-              <Form.Select
-                name="Purpose" style={{border:"1px Solid grey" ,borderRadius:"7px"}}
-                value={formData.Purpose}
-                onChange={handleInputChange}
-              >
-                <option value="">Select Purpose</option>
-                <option value="Learn about Accessibilty and Inclusion">
-                Learn about Accessibilty and Inclusion
-                </option>
-                <option value="Media Coverage">
-                Media Coverage
-                </option>
-                <option value="Network and Collaborate">Network and Collaborate</option>
-                <option value="Participate in Workshops and experince zones">Participate in Workshops and experince zones</option>
-                <option value="Volunteer">Volunteer</option>
-              </Form.Select>
-              {errors.Purpose && (
-                <small className="text-danger">{errors.Purpose}</small>
-              )}
-            </Form.Group>
             {Object.keys(formData).map((field) =>
               field !== "category" && field !== "Purpose" ? (
                 <Form.Group className="mb-3" key={field}>
@@ -221,7 +221,9 @@ const Navbar: React.FC = () => {
                     placeholder={field.replace(/([A-Z])/g, " $1")}
                     name={field}
                     value={formData[field as keyof typeof formData]}
-                    // onChange={handleInputChange}
+                    onChange={(e) =>
+                      handleInputChange(e as React.ChangeEvent<HTMLInputElement>)
+                    }
                   />
                   {errors[field] && (
                     <small className="text-danger">{errors[field]}</small>
@@ -237,6 +239,7 @@ const Navbar: React.FC = () => {
           </Form>
         </Modal.Body>
       </Modal>
+      {resultMessage && <p className="text-center mt-3">{resultMessage}</p>}
     </>
   );
 };

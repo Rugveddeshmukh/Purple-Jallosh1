@@ -58,7 +58,7 @@ const Speakers: React.FC = () => {
             <h2>Who&apos;s Speaking</h2>
             <div className="bar"></div>
 
-            <div className="bg-title">Speakers</div>
+            {/* <div className="bg-title">Speakers</div> */}
 
             <Link href="/speakers" className="btn btn-primary w-full sm:w-auto">
               View More Speakers
@@ -78,7 +78,7 @@ const Speakers: React.FC = () => {
                     height={800}
                   />
 
-                  <div className="speakers-content" style={{textAlign:'center', alignItems:'center', paddingLeft:'10px'}}>
+                  <div className="speakers-content" style={{textAlign:'center', alignItems:'center', paddingLeft:'10px', }}>
                     <h3>{value.name}</h3>
                   {/*  <span>{value.designation}</span>*/}
                   </div>

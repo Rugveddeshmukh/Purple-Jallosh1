@@ -116,10 +116,11 @@ label {
   font-size: 15px;
   color: #ffffff;
   box-shadow: 0 8px 6px -6px rgba(50, 51, 51, 0.4);
-  border: none;
+  
   padding: 15px 30px;
-  border-radius: 0;
+  border-radius: 15;
   transition: 0.5s;
+  
 }
 
 .btn-primary {
@@ -127,6 +128,7 @@ label {
   background: purple;
   position: relative;
   z-index: 1;
+  
 }
 .btn-primary::before, .btn-primary::after {
   content: "";
@@ -137,6 +139,7 @@ label {
   height: 100%;
   z-index: -1;
   transition: 0.5s;
+  
 }
 .btn-primary::before {
   left: 0;
@@ -428,6 +431,7 @@ Navbar CSS
   margin-left: 15px;
   margin-right: 15px;
   font-weight: bold;
+  color: #fff;
   
 }
 .elkevent-nav nav .navbar-nav .nav-item a:hover, .elkevent-nav nav .navbar-nav .nav-item a:focus, .elkevent-nav nav .navbar-nav .nav-item a.active {
@@ -677,9 +681,9 @@ Main Banner CSS
   left: 18%;
   margin-left: -190px;
   z-index: -1;
-  border: 18px solid rgba(104, 89, 222, 0.24);
-  box-sizing: border-box;
-  box-shadow: 0 60px 40px -40px rgba(0, 0, 0, 0.3);
+/* border: 18px solid rgba(104, 89, 222, 0.24);  */
+  /* box-sizing: border-box; */
+  /* box-shadow: 0 60px 40px -40px rgba(0, 0, 0, 0.3); */
 }
 .main-banner-content h1 {
   color: #ffffff;
@@ -723,8 +727,9 @@ Main Banner CSS
   margin-right: 0;
 }
 .main-banner-content p {
+  padding-top: 7px;
   color: #efa506;
-  font-size: 22px;
+  font-size: 25px;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
@@ -979,19 +984,20 @@ About CSS
   z-index: 1;
   overflow: hidden;
 }
-.about-area.bg-image {
+/* .about-area.bg-image {
   background-image: url("/images/bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 .about-content span {
   color: #FF2D55;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: uppercase;
   display: block;
+  font-weight: bold;
 }
 .about-content h2 {
   font-size: 40px;
@@ -1131,7 +1137,7 @@ Why Choose Us CSS
   width: 100%;
   height: 100%;
   background: #0d1028;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .why-choose-us .slideshow {
   z-index: -1;
@@ -1339,7 +1345,9 @@ Speakers CSS
 .single-speakers .speakers-content h3 {
   font-size: 24px;
   margin-bottom: 0;
-  color: #FF2D55;
+  color: #fff;
+  background-color: purple;
+  align-items: "center";
 }
 .single-speakers .speakers-content h3:hover, .single-speakers .speakers-content h3:focus {
   color: #8dc63f;

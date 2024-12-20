@@ -14,7 +14,7 @@ export default function Page() {
         homePageUrl="/"
         homePageText="Home"
         activePageText="Speakers"
-        bgImg="/images/main-bg1.jpg"
+        bgImg="/images/contact.jpg"
       />
 
       <SpeakersOne />

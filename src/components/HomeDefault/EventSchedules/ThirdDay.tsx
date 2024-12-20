@@ -36,48 +36,44 @@ const ThirdDay: React.FC = () => {
     pincode: "",
     state: "",
   });
-
-  const generateQRCode = (text: string) => {
-    return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
-      text
-    )}&size=150x150`;
-  };
+  const [result, setResult] = React.useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
-        formData, // Data you want to send in the email
-        "your_user_id" // Replace with your EmailJS user ID
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-          setQrCode(generateQRCode("Thank you for registering!")); // Show QR Code
-          setBookingLimitActivity1((prevLimit) => prevLimit - 1); // Reduce count for Activity 1
-          setBookingLimitActivity2((prevLimit) => prevLimit - 1); // Reduce count for Activity 2
-          setBookingLimitActivity3((prevLimit) => prevLimit - 1); // Reduce count for Activity 3
-          setBookingLimitActivity4((prevLimit) => prevLimit - 1); // Reduce count for Activity 4
-          setBookingLimitActivity5((prevLimit) => prevLimit - 1); // Reduce count for Activity 5
-          setBookingLimitActivity6((prevLimit) => prevLimit - 1); // Reduce count for Activity 6
-
-          setShowForm(false); // Close the modal
-        },
-        (error) => {
-          console.error("Error sending email:", error);
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target as HTMLFormElement);
+    
+        formData.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320");
+    
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+    
+        const data = await response.json();
+    
+        if (data.success) {
+          setResult("Form Submitted Successfully");
+           console.log (result)
+              setBookingLimitActivity1((prevLimit) => prevLimit - 1); // Reduce count for Activity 1
+              setBookingLimitActivity2((prevLimit) => prevLimit - 1); // Reduce count for Activity 2
+              setBookingLimitActivity3((prevLimit) => prevLimit - 1); // Reduce count for Activity 3
+              setBookingLimitActivity4((prevLimit) => prevLimit - 1); // Reduce count for Activity 4
+              setBookingLimitActivity5((prevLimit) => prevLimit - 1); // Reduce count for Activity 5
+              setBookingLimitActivity6((prevLimit) => prevLimit - 1); // Reduce count for Activity 6
+    
+              setShowForm(false); // Close the modal
+         // event.target.reset();
+        } else {
+          console.log("Error", data);
+          setResult(data.message);
         }
-      );
-   
-  };
+     };
 
   return (
     <>
@@ -87,7 +83,7 @@ const ThirdDay: React.FC = () => {
             <AccordionItemButton>
               <div className="author">
                 <Image
-                  src="/images/dummy images.png"
+                  src="/images/logonav.png"
                   title="Steven Smith"
                   alt="Author"
                   width={150}
@@ -635,7 +631,7 @@ const ThirdDay: React.FC = () => {
                   <h2 style={{ textAlign: "center", marginBottom: "20px", fontSize: "1.8rem" }}>
                     Registration Form
                   </h2>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={onSubmit}>
                     <div style={{ marginBottom: "15px" }}>
                       <label>First Name:</label>
                       <input

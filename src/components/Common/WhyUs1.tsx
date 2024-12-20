@@ -81,6 +81,7 @@ const WhyUs: React.FC = () => {
               alignItems: "center",
               textAlign: "center",
               color:"#fff",
+              border:"none",
             }}
           >
             <div className="icon" style={{ fontSize: "2rem", marginBottom: "10px" }}>

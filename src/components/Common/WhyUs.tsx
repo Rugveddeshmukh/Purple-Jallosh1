@@ -62,31 +62,37 @@ const WhyUs: React.FC = () => {
 
   return (
     <>
+     <div className="section-title" style={{marginLeft:"70px"}}>
+       <span>Listen to the Event Speakers</span>
+       <h2>Who&apos;s Speaking</h2></div>
+       <div className="bar"></div>
       <div className="why-choose-us">
+      
   <div className="row m-0 justify-content-between">
     {WhyUsData &&
       WhyUsData.slice(0, 5).map((value, i) => (
         <div
-          className="col-lg-2 col-md-3 col-sm-4 col-6 p-2 d-flex justify-content-center"
+          className="col-lg-2 col-md-3 col-sm-4 col-6 p-2 d-flex justify-content-center  " 
           key={i}
         >
           <div
             className="single-box"
             style={{
               height: "250px",
-              width: "200px",
+              width:"200px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
               color:"#fff",
+              border:"none"
             }}
           >
-            <div className="icon" style={{ fontSize: "2rem", marginBottom: "10px" }}>
+            <div className="icon" style={{ fontSize: "2rem", marginBottom: "10px", textAlign:'center'}}>
               <i className={value.iconName}></i>
             </div>
-            <h3 style={{ fontSize: "1rem", fontWeight: "bold", margin: "10px 0" ,color:"#fff", }}>
+            <h3 style={{ fontSize: "1rem", fontWeight: "bold", margin: "10px 0" ,color:"#fff", textAlign:'center' }}>
               {value.title}
             </h3>
             <button

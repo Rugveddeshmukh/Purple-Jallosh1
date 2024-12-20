@@ -102,7 +102,7 @@ const MainBanner: React.FC = () => {
             <div className="container">
               <div className="main-banner-content">
                 <p>
-                  Get <span>ready</span> to Embrace the Purple Vibe
+                  GET <span>READY</span> TO EMBRACE THE PURPLE VIBE
                 </p>
                 <p
                   style={{
@@ -111,7 +111,6 @@ const MainBanner: React.FC = () => {
                     color: "white",
                   }}
                 >
-                  Inclusion is not just about accommodating differences its about embracing them and creating a world where everyone belongs  <br />
                   <span
                     style={{
                       color: "white",
@@ -130,7 +129,7 @@ const MainBanner: React.FC = () => {
                 <ul>
                   <li>
                     <i className="icofont-compass"></i> Venue- Auto Cluster Exhibition
-                     Ground  
+                     Ground PCMC Pune 
                   </li>
                   <li>
                     <i className="icofont-calendar"></i> 17-19 Jan, 2025
