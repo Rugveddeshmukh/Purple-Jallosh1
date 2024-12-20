@@ -76,7 +76,7 @@ const LatestNews: React.FC = () => {
                       </Link>
                     </h3>
                     <p>
-                    Shri Sachindra Pratap Singh, Secretary, DEPwD, Maharashtra State, visited DBF. During his visit, a detailed presentation on DBF and the Purple Jallosh event was given, which he greatly appreciated. The meeting was also attended by Shri Pravin Puri, State Commissioner for PwD Maharashtra, and Shri Omprakash Deshmukh, Managing Director of DBF.
+                    Shri Sachindra Pratap Singh, Secretary, DEPwD, Maharashtra State, visited DBF During his visit, a detailed presentation on DBF and the Purple Jallosh event was given, which he greatly appreciated The meeting was also attended by Shri Pravin Puri, State Commissioner for PwD Maharashtra, and Shri Omprakash Deshmukh, Managing Director of DBF.
 
                     </p>
                     {/* <Link href="/blog/details" className="read-more-btn">
@@ -180,7 +180,7 @@ const LatestNews: React.FC = () => {
                       </Link>
                     </h3>
                     <p>
-                    UPSC trainee officers from YASHADA attended an orientation session at DBF, where they were introduced to the organization's activities and initiatives. The session also highlighted the significance of the upcoming Purple Jallosh event, fostering awareness and engagement with efforts towards inclusivity and empowerment for Persons with Disabilities (PwDs).
+                    UPSC trainee officers from YASHADA attended an orientation session at DBF, where they were introduced to the organizations activities and initiatives. The session also highlighted the significance of the upcoming Purple Jallosh event, fostering awareness and engagement with efforts towards inclusivity and empowerment for Persons with Disabilities (PwDs).
                     </p>
                     {/* <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
