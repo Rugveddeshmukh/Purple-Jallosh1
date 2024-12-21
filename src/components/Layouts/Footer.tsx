@@ -37,19 +37,43 @@ const Footer: React.FC = () => {
                   MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019
                 </p>
                   <Link href="/contact-us" className="contact-authority">
-                  <i className="icofont-phone"></i> Contact Our Authority
+                  <i className="icofont-phone"></i> Contact Us
                 </Link>
               </div>
             </div>
 
+            {/* Embedded Map */}
+           <div
+            style={{
+              flex: "1 1 300px",
+              minWidth: "280px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5601269561766!2d73.79904587471056!3d18.63884446555172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84992d04bbd%3A0x9f1c44fb853ba461!2sAuto%20Cluster%20Exhibition%20Center!5e0!3m2!1sen!2sin!4v1734504354767!5m2!1sen!2sin"
+            style={{
+            width: "100%", // Dynamic width for mobile and desktop
+            maxWidth: "400px", // Maximum width for larger screens
+            height: "250px", // Height for mobile and desktop consistency
+            border: 0,
+            borderRadius: "2px", // Optional: adds rounded corners for aesthetic
+           // marginTop:"px",
+            
+          }}
+           loading="lazy"
+          ></iframe>
+          </div>
+
             {/* Right Column with Social Links */}
             <div className="col-lg-6 col-md-6">
               <div className="single-footer-widget">
-                <h3>Social Connection</h3>
-                <p>
+                <h3>Follow Us On</h3>
+                {/* <p>
                   Don&apos;t miss Link thing! Receive daily news You should
                   connect social area for Any Proper Updates Anytime.
-                </p>
+                </p> */}
 
                 <ul className="social-links">
                   <li>
@@ -93,29 +117,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Embedded Map */}
-           <div
-            style={{
-              flex: "1 1 300px",
-              minWidth: "280px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5601269561766!2d73.79904587471056!3d18.63884446555172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84992d04bbd%3A0x9f1c44fb853ba461!2sAuto%20Cluster%20Exhibition%20Center!5e0!3m2!1sen!2sin!4v1734504354767!5m2!1sen!2sin"
-            style={{
-            width: "100%", // Dynamic width for mobile and desktop
-            maxWidth: "400px", // Maximum width for larger screens
-            height: "250px", // Height for mobile and desktop consistency
-            border: 0,
-            borderRadius: "2px", // Optional: adds rounded corners for aesthetic
-            marginTop:"100px",
             
-          }}
-           loading="lazy"
-          ></iframe>
-          </div>
 
 
             {/* Footer Bottom */}
@@ -126,19 +128,19 @@ const Footer: React.FC = () => {
                     <Image
                       src="/images/logofoot.png"
                       alt="logo"
-                      width={120}
-                      height={38}
-                      style={{ backgroundColor: "white" }}
+                      width={150}
+                      height={50}
+                      
                     />
                   </Link>
                 </div>
 
                 <ul>
                   <li>
-                    <Link href="/contact-us">Contact</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </li>
                   <li>
-                    <Link href="#">Register Now</Link>
+                    <Link href="#">Home</Link>
                   </li>
                 </ul>
 

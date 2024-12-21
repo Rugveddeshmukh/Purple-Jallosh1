@@ -32,13 +32,13 @@ const SpeakersMemberData: SpeakersMember[] = [
   },
   {
     image: "/images/Dhananay Bhole-modified.PNG",
-    name: "Dhananay Bhole",
+    name: "Dhananjay Bhole",
    // designation: "Developer Expert",
     
   },
   {
-    image: "/images/Jaee Khamkar-modified.PNG",
-    name: "Jaee Khamkar",
+    image: "/images/Kanchan Pamnani-modified (1).png",
+    name: "Kanchan Pamnani",
    // designation: "Senio Visual Designer",
     
   },
@@ -54,7 +54,7 @@ const Speakers: React.FC = () => {
       <div className="speakers-area ptb-120 pb-0">
         <div className="container">
           <div className="section-title">
-            <span>Listen to the Event Speakers</span>
+            <span>Speaker Lineup  </span>
             <h2>Who&apos;s Speaking</h2>
             <div className="bar"></div>
 
@@ -75,10 +75,10 @@ const Speakers: React.FC = () => {
                     src={value.image}
                     alt="Speaker"
                     width={800}
-                    height={800}
+                    height={400}
                   />
 
-                  <div className="speakers-content" style={{textAlign:'center', alignItems:'center', paddingLeft:'10px', }}>
+                  <div className="speakers-content" style={{textAlign:'center', alignItems:'center',}}>
                     <h3>{value.name}</h3>
                   {/*  <span>{value.designation}</span>*/}
                   </div>

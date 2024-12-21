@@ -7,7 +7,7 @@ interface WhyUs {
   iconName: string;
   title: string;
   shortText: string;
-  btnText: string;
+  //btnText: string;
 }
 
 const WhyUsData: WhyUs[] = [
@@ -15,33 +15,28 @@ const WhyUsData: WhyUs[] = [
     iconName: "icofont-people",
     title: "CELEBRATING DIVERSITY",
     shortText:"Purple Jallosh celebrates resilience, diversity, and talent, showcasing the skills and stories of PwDs to inspire positivity and inclusion.",
-    btnText: "Read More",
+    //btnText: "Read More",
   },
   {
-    iconName: "icofont-book-alt",
-    title: " CAPACITY BUILDING AND LEARNING  ",
-    shortText:"Purple Jallosh empowers individuals and organizations to adopt inclusive practices through workshops, training, and interactive sessions, promoting accessible solutions.",
-    btnText: "Read More",
+      iconName: "icofont-brainstorming",
+      title: "INCLUSION AND INNOVATION ",
+      shortText:
+        "Discover innovative technologies and solutions empowering PwDs, from assistive devices to inclusive practices tackling real-world challenges.",
+      //btnText: "Read More",
   },
+  
   {
     iconName: "icofont-legal",
     title: "  POLICY AND ADVOCACY DIALOGUE   ",
     shortText: "Join policymakers, organizations, and advocates to influence inclusive policies and address systemic barriers, fostering actionable dialogue for long-term impact.",
-    btnText: "Read More",
+    //btnText: "Read More",
   },
   {
     iconName: "icofont-businessman",
     title: " INCLUSIVE EMPLOYMENT OPPORTUNITIES  ",
     shortText:
       "Bridge the employment gap for PwDs by exploring career opportunities, inclusive hiring, and skill development, connecting with employers and changemakers for sustainable solutions.",
-    btnText: "Read More",
-  },
-  {
-    iconName: "icofont-microphone",
-    title: " RESILIENT STORIES AND PERFORMANCES  ",
-    shortText:
-      "Celebrate inclusion through stories and performances by PwDs, showcasing how opportunity, resilience, and support unlock their full potential.",
-    btnText: "Read More",
+    //btnText: "Read More",
   },
   
   
@@ -65,23 +60,20 @@ const WhyUs: React.FC = () => {
       <div className="why-choose-us">
   <div className="row m-0 justify-content-between">
     {WhyUsData &&
-      WhyUsData.slice(0, 5).map((value, i) => (
-        <div
-          className="col-lg-2 col-md-3 col-sm-4 col-6 p-2 d-flex justify-content-center"
-          key={i}
-        >
+      WhyUsData.slice(0, 4).map((value, i) => (
+        <div className="col-lg-3 col-sm-6 p-0" key={i}>
+        
           <div
             className="single-box"
             style={{
               height: "250px",
-              width: "200px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
               color:"#fff",
-              border:"none",
+              
             }}
           >
             <div className="icon" style={{ fontSize: "2rem", marginBottom: "10px" }}>
@@ -90,12 +82,12 @@ const WhyUs: React.FC = () => {
             <h3 style={{ fontSize: "1rem", fontWeight: "bold", margin: "10px 0" ,color:"#fff", }}>
               {value.title}
             </h3>
-            <button
+            {/* <button
               className="btn btn-primary"
               onClick={() => openModal(value.shortText)}
             >
               {value.btnText}
-            </button>
+            </button> */}
           </div>
         </div>
       ))}
@@ -106,22 +98,22 @@ const WhyUs: React.FC = () => {
         <ul className="slideshow">
           <li>
             <span
-              style={{ backgroundImage: `url(/images/image1.jpg)` }}
+              style={{  backgroundColor:"rgb(78,34,111)" }}
             ></span>
           </li>
           <li>
             <span
-              style={{ backgroundImage: `url(/images/image2.jpg)` }}
+              style={{  backgroundColor:"rgb(78,34,111)" }}
             ></span>
           </li>
           <li>
             <span
-              style={{ backgroundImage: `url(/images/image4.jpg)` }}
+              style={{  backgroundColor:"rgb(78,34,111)" }}
             ></span>
           </li>
           <li>
             <span
-              style={{ backgroundImage: `url(/images/image10.jpg)` }}
+              style={{  backgroundColor:"rgb(78,34,111)" }}
             ></span>
           </li>
         </ul>

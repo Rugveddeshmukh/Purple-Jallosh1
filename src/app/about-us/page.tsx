@@ -17,8 +17,8 @@ export default function Page() {
       <Navbar />
 
       <PageBanner 
-        pageTitle="Know More About Event PURPLE JALLOSH"
-        shortText="Are you ready to experience an extraordinary celebration of abilities, innovation, and joy? 
+        pageTitle=" PURPLE JALLOSH - 2025"
+        shortText=" Experience an extraordinary celebration of abilities, innovation, and joy.
 "
         homePageUrl="/"
         homePageText="Home"

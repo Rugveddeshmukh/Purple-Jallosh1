@@ -8,30 +8,35 @@ interface FunFact {
 
 const FunFactData: FunFact[] = [
   {
+    iconName: "icofont-business-man",
+    number: "30+",
+    text: "Corporate DE & I initiatives",
+  },
+  {
     iconName: "icofont-rocket",
-    number: "40",
+    number: "40+",
     text: "Assistive Tech Start-Ups",
   },
-  {
-    iconName: "icofont-business-man",
-    number: "10+",
-    text: "Corporates",
-  },
+  
   {
     iconName: "icofont-handshake-deal",
-    number: "10",
-    text: "NGOs ",
+    number: "50+ ",
+    text: "National and Local NGOs",
   },
   {
     iconName: "icofont-group",
-    number: "10",
-    text: "Panel Discussion And Conferences ",
+    number: "150+",
+    text: "Purple Solvathon Participants ",
   },
 ];
 
 const FunFact: React.FC = () => {
   return (
-    <>
+    <> 
+      <div className="section-title" style={{marginLeft:"70px" }}>
+       <span style={{paddingTop:"20px"}}>Breaking Barriers 
+       </span>
+       <h2>Building Dreams</h2></div>
       <div className="funfacts-area ptb-120">
         <div className="container">
           <div className="row justify-content-center">

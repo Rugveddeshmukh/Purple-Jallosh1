@@ -51,7 +51,7 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Assistive Tech Expo</h2>
         <ul style={listStyle}>
           <li>
-          Explore cutting-edge innovations that are reshaping accessibility. From smart devices to adaptive tools, discover how technology empowers independence.
+          Explore cutting-edge innovations that are reshaping accessibility from smart devices to adaptive tools. 
           </li>
           <li>
           Engage with live demonstrations, insightful talks, and interactive displays.
@@ -63,7 +63,7 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Experience Zones</h2>
         <ul style={listStyle}>
           <li>
-          Step into the shoes of PwDs through immersive simulations. Feel the challenges and triumphs of navigating daily life with mobility or sensory impairments. 
+           Experience the challenges and triumphs of navigating daily life with mobility or sensory impairments. 
           </li>
           <li>
           These activities aim to foster empathy and drive meaningful conversations about inclusion.
@@ -75,7 +75,7 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Abilympics</h2>
         <ul style={listStyle}>
           <li>
-          Watch skilled PwDs compete in vocational challenges, showcasing exceptional talents in areas like technology, culinary arts, and craftsmanship. 
+          Watch skilled PwDs  showcasing exceptional talents in areas like technology, culinary arts, and craftsmanship. 
           </li>
           <li>
           Cheer on participants as they inspire with their resilience and expertise.
@@ -123,7 +123,10 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Local NGO Stalls</h2>
         <ul style={listStyle}>
           <li>
-          Discover inspiring initiatives led by over 20 local PwD organizations and NGOs. Network, collaborate, and learn about their impactful work. 
+          Discover inspiring initiatives led by over 50 local PwD organizations and NGOs. 
+          </li>
+          <li>
+          Network, collaborate, and learn about their impactful work.   
           </li>
         </ul>
       </section>   
@@ -132,7 +135,10 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Food Court</h2>
         <ul style={listStyle}>
           <li>
-          Relish an array of dishes prepared by womens self-help groups and PwDs, combining culinary creativity with economic empowerment. Enjoy delicious food while supporting local entrepreneurship. 
+          Relish an array of dishes prepared by women self-help groups and PwDs, combining culinary creativity with economic empowerment.
+          </li>
+          <li>
+          Enjoy delicious food while supporting local entrepreneurship. 
           </li>
         </ul>
       </section>
@@ -141,13 +147,16 @@ const PurpleJalloshDetails: React.FC = () => {
         <h2 style={titleStyle}>Jagruti Mela</h2>
         <ul style={listStyle}>
           <li>
-          Access essential resources and gain insights on government schemes and services available for PwDs through one-on-one consultations and workshops. Empower yourself with knowledge that drives change. 
+          Access and gain insights on government schemes and services available for PwDs through one-on-one consultations and workshops.  
+          </li>
+          <li>
+          Empower yourself with knowledge that drives change.
           </li>
         </ul>
       </section>
-
-      <h4 style={{color:"rgb(78,34,111)",fontSize:"1.8rem",textAlign: 'center',}} >Join Purple Jallosh as part of a diverse and vibrant community! </h4>
-
+      <br/>
+      <h4 style={{color:"rgb(78,34,111)",fontSize:"1.8rem",textAlign: 'center',}} >Join Us to Support  a Diverse and Vibrant Community! </h4>
+           
          <section style={sectionStyle}>
         <h2 style={titleStyle}>Assistive Tech Startups</h2>
         <ul style={listStyle}>

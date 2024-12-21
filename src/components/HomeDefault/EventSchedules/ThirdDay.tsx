@@ -92,13 +92,13 @@ const ThirdDay: React.FC = () => {
               </div>
 
               <div className="schedule-info">
-                <h3>EVENT SCHEDULE 3 DAY</h3>
+                <h3>EVENT SCHEDULE DAY 3</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 10:00AM - 06:00PM
                   </li>
@@ -108,26 +108,26 @@ const ThirdDay: React.FC = () => {
           </AccordionItemHeading>
 
           <AccordionItemPanel>
-            <li>	10:00 AM - 04:00 PM: Assistive Tech Expo, Experience Zones, and Local NGO Stalls</li>
-            <li>	12:00 AM - 04:00 PM: Aids and Assistive Devices Distribution</li>
-            <li>	12:00 AM - 04:00 PM: Abilympics</li>
-            <li>	01:00 AM - 02:00 PM: Lunch Break</li>
-            <li>	01:00 AM - 03:30 PM: Creative Workshops for Children with Disabilities</li>
-            <li>	04:00 PM - 05:00 PM: Mainstage Event: Live Music Band</li>
-            <li>	05:00 PM - 06:00 PM: Closing Ceremony</li>
+            <li>  10:00 AM - 04:00 PM: Assistive Tech Expo, Experience Zones, and Local NGO Stalls</li>
+            <li>	12:00 AM - 04:00 PM: Aids and Assistive Devices Distribution</li>
+            <li>	12:00 AM - 04:00 PM: Abilympics</li>
+            <li>  01:00 AM - 02:00 PM: Lunch Break</li>
+            <li>	01:00 AM - 03:30 PM: Creative Workshops for Children with Disabilities</li>
+            <li>	04:00 PM - 05:00 PM: Mainstage Event: Live Music Band</li>
+            <li>	05:00 PM - 06:00 PM: Closing Ceremony</li>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
                 <div className="location">
-                  <b>Location:</b> PCMC Divyang Bhavan{" "}
-                  <span>India</span>
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -154,10 +154,10 @@ const ThirdDay: React.FC = () => {
                 <h3>Sports as therapy and career</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 10:00AM - 11:00PM
                   </li>
@@ -190,22 +190,22 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- Sports as therapy and career</li>
-           <span>SPEAKER:-Bal Kalyan Sanstha, Vaishnavi Jagtap,  Shri Kumbhar
+           <span>SPEAKERS:-Bal Kalyan Sanstha, Vaishnavi Jagtap,  Shri Kumbhar
           </span>
           
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b>Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -232,10 +232,10 @@ const ThirdDay: React.FC = () => {
                 <h3>National  Trust /Guardianship / Reality</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 11:00AM - 12:00PM
                   </li>
@@ -268,22 +268,22 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- National  Trust /Guardianship / Reality</li>
-           <span>SPEAKER:- Bhagyashri More, Nandkurmar Phule, Agarkar Madam, Rajendra Waghchaure 
+           <span>SPEAKERS:- Bhagyashri More, Nandkurmar Phule, Agarkar Madam, Rajendra Waghchaure 
           </span>
           
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -310,10 +310,10 @@ const ThirdDay: React.FC = () => {
                 <h3>Inclusive Film Screening and Interaction</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 12:00AM - 01:00PM
                   </li>
@@ -346,21 +346,21 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- Inclusive Film Screening and Interaction</li>
-         <span>SPEAKER:- We care
+         <span>SPEAKERS:- We care
           </span>
           
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> PCMC Divyang Bhavan {" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -387,10 +387,10 @@ const ThirdDay: React.FC = () => {
                 <h3>Act Implementation and Advocacy</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 02:00AM - 03:00PM
                   </li>
@@ -423,22 +423,22 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- Act Implementation and Advocacy </li>
-          <span>SPEAKER:- Armaan Ali, Kanchan Pamnani, Jasmina Khanna, Davkhar Madam, Suhas Tendulkar
+          <span>SPEAKERS:- Armaan Ali, Kanchan Pamnani, Jasmina Khanna, Davkhar Madam, Suhas Tendulkar
           </span>
           
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> PCMC Divyang Bhavan {" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -465,10 +465,10 @@ const ThirdDay: React.FC = () => {
                 <h3>What after Us</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 03:00AM - 04:00PM
                   </li>
@@ -501,22 +501,22 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- What after Us</li>
-          <span>SPEAKER:- Achyut Godbole, Vidya Phadke, Ambika Takalkar, A B Rajmane
+          <span>SPEAKERS:- Achyut Godbole, Vidya Phadke, Ambika Takalkar, A B Rajmane
           </span>
           
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> PCMC Divyang Bhavan {" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -543,10 +543,10 @@ const ThirdDay: React.FC = () => {
                 <h3>Action Plan</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 04:00AM - 05:00PM
                   </li>
@@ -579,21 +579,21 @@ const ThirdDay: React.FC = () => {
 
           <AccordionItemPanel>
           <li>TOPIC:- Action Plan</li>
-           <span>SPEAKER:- Armaan,Vijay Kanhekar, Abhijit Murugkar, Omprakash Deshmukh, Paresh Gandhi, Manav Kamble
+           <span>SPEAKERS:- Armaan,Vijay Kanhekar, Abhijit Murugkar, Omprakash Deshmukh, Paresh Gandhi, Manav Kamble
           </span>
           
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> PCMC Divyang Bhavan {" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>

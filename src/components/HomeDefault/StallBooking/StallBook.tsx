@@ -17,8 +17,8 @@ const StallBooking: React.FC = () => {
 
   return (
     <div className="container my-5">
-      <div className="text-center">
-        <h2 className="mb-4">Welcome to Purple Jallosh,
+      <div className="text-center" >
+        <h2 className="mb-4"> EXPO Rush   
           <br/> Book your stall now!</h2>
         <div className="row justify-content-center">
 

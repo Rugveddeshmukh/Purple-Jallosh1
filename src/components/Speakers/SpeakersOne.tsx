@@ -17,19 +17,19 @@ interface SocialLink {
 }
 
 const SpeakersMemberData: SpeakersMember[] = [
+  // {
+  //   image: "/images/Raghu Degla-modified (1).png",
+  //   name: "Raghu Degla",
+  //   // designation: "Founder & CEO",
+  // },
   {
-    image: "/images/Raghu Degla-modified (1).png",
-    name: "Raghu Degla",
-    // designation: "Founder & CEO",
-  },
-  {
-    image: "/images/Kanchan Pamnani-modified (1).png",
-    name: "Kanchan Pamnani",
+    image: "/images/Jaee Khamkar-modified.PNG",
+    name: "Jaee Khamkar",
     // designation: "Lead Designer",
   },
   {
     image: "/images/Meet Arman Ali-modified (1).png",
-    name: "Meet Arman Ali",
+    name: "Arman Ali",
     // designation: "Developer Expert",
   },
   {
@@ -55,17 +55,17 @@ const SpeakersOne: React.FC = () => {
       <div className="speakers-area ptb-120">
         <div className="row m-0">
           {SpeakersMemberData &&
-            SpeakersMemberData.slice(0, 8).map((value, i) => (
+            SpeakersMemberData.slice(0, 7).map((value, i) => (
               <div className="col-lg-3 col-sm-6 p-0" key={i}>
                 <div className="single-speakers">
                   <Image
                     src={value.image}
                     alt="Speaker"
                     width={800}
-                    height={800}
+                    height={400}
                   />
 
-                  <div className="speakers-content">
+                  <div className="speakers-content" style={{textAlign:'center', alignItems:'center',}}>
                     <h3>{value.name}</h3>
                     {/* <span>{value.designation}</span> */}
                   </div>

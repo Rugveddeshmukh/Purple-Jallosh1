@@ -96,10 +96,10 @@ const SecondDay: React.FC = () => {
                 </h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span>Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 10:00AM - 06:00PM
                   </li>
@@ -120,15 +120,15 @@ const SecondDay: React.FC = () => {
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
                 <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -155,10 +155,10 @@ const SecondDay: React.FC = () => {
                 <h3>Skilling and Vocational Training</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span>Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 10:00AM - 12:00PM
                   </li>
@@ -191,20 +191,20 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Skilling and Vocational Training</li>
-             <span> SPEAKER:- Bhushan Punani - Moderator, Meenakshi Nikam,  </span>
+             <span> SPEAKERS:- Bhushan Punani - Moderator, Meenakshi Nikam  </span>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b>Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019, {" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -231,10 +231,10 @@ const SecondDay: React.FC = () => {
                 <h3>Inclusive higher Education / Integration</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 10:00AM - 12:00PM
                   </li>
@@ -267,20 +267,20 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Inclusive higher Education / Integration </li>
-            <span>SPEAKER:-Yajurvendra Mahajan, Jaee Khamkar, Jai Vakil Foundation</span>
+            <span>SPEAKERS:-Yajurvendra Mahajan, Jaee Khamkar, Jai Vakil Foundation</span>
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -307,10 +307,10 @@ const SecondDay: React.FC = () => {
                 <h3>Film / Interaction</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 12:00AM - 01:00PM
                   </li>
@@ -343,20 +343,20 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Film / Interaction</li>
-            <span>SPEAKER:- </span>
+            <span>SPEAKERS:- </span>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -383,10 +383,10 @@ const SecondDay: React.FC = () => {
                 <h3>Employment and self employment</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 02:00AM - 03:00PM
                   </li>
@@ -419,21 +419,21 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Employment and self employment </li>
-            <span>SPEAKER:- Shruti Pushkarna - Moderator, Shanti Raghavan, Bhavesh Bhatia
+            <span>SPEAKERS:- Shruti Pushkarna - Moderator, Shanti Raghavan, Bhavesh Bhatia
             </span>
 
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -460,10 +460,10 @@ const SecondDay: React.FC = () => {
                 <h3>Prevention, Early Detection, Early Intervention</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 03:00AM - 04:00PM
                   </li>
@@ -496,21 +496,21 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Prevention, Early Detection, Early Intervention</li>
-           <span>SPEAKER:- Dr. Varsha Gattu,  Dr. Vachasundar, Pankaj Waghmare , Dr Sameer Dalwai - Moderator
+           <span>SPEAKERS:- Dr. Varsha Gattu,  Dr. Vachasundar, Pankaj Waghmare , Dr Sameer Dalwai - Moderator
             </span>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>
@@ -537,10 +537,10 @@ const SecondDay: React.FC = () => {
                 <h3>Inclusive Film Screening and Interaction</h3>
 
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className="icofont-user-suited"></i> By{" "}
                     <span>PCMC</span> Divyang Bhavan Foundation
-                  </li>
+                  </li> */}
                   <li>
                     <i className="icofont-wall-clock"></i> 04:00AM - 05:00PM
                   </li>
@@ -573,21 +573,21 @@ const SecondDay: React.FC = () => {
 
           <AccordionItemPanel>
             <li>TOPIC:- Inclusive Film Screening and Interaction</li>
-            <span>SPEAKER:- We Care
+            <span>SPEAKERS:- We Care
             </span>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
-                <div className="location">
-                  <b>Location:</b> Auto Cluster Exhibition Center, H-Block,Chinchwad East, 181, Old Mumbai - Pune Hwy, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019,{" "}
-                  <span>India</span>
-                </div>
+                {/* <div className="location">
+                <br/>
+                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                </div> */}
               </div>
 
               <div className="col-lg-6 col-md-5 text-right">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   View Details
-                </Link>
+                </Link> */}
               </div>
             </div>
           </AccordionItemPanel>

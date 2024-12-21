@@ -12,6 +12,7 @@ const MainBanner: React.FC = () => {
   const [toggler, setToggler] = useState(false); // Lightbox toggler
   const [showModal, setShowModal] = useState(false); // Modal visibility
 
+
   // State for form data
   const [formData, setFormData] = useState({
     category: "",
@@ -19,14 +20,22 @@ const MainBanner: React.FC = () => {
     Contact: "",
     Email: "",
     City: "",
-    PinCode: "",
     State: "",
-    Purpose: "",
     Message: "",
   });
 
   // State for form validation
   const [errors, setErrors] = useState<{ [key: string]: string }>({}); // Fixed error typing
+  const [resultMessage, setResultMessage] = useState<string>("");
+  const [cities, setCities] = useState<string[]>([]);
+  
+    const statesAndCities: { [key: string]: string[] } = {
+      Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+      Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
+      Karnataka: ["Bangalore", "Mysore", "Mangalore"],
+      Delhi: ["New Delhi"],
+    };
+
 
   // Modal Handlers
   const handleModalOpen = () => setShowModal(true);
@@ -51,36 +60,56 @@ const MainBanner: React.FC = () => {
     if (!formData.Contact) errors.Contact = "* Required";
     if (!formData.Email) errors.Email = "* Required";
     if (!formData.City) errors.City = "* Required";
-    if (!formData.PinCode) errors.PinCode = "* Required";
     if (!formData.State) errors.State = "* Required";
-    if (!formData.Purpose) errors.Purpose = "* Required";
     return errors;
   };
 
   // Form submission handler
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-    } else {
-      console.log("Form submitted:", formData);
-      alert("Registration successful!");
-      setFormData({
+      return;
+    } 
+     // Web3Forms API submission
+    const form = new FormData();
+    form.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320");
+    Object.entries(formData).forEach(([key, value]) =>
+      form.append(key, value)
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage("Registration successful! Email sent.");
+        setFormData({
         category: "",
         FullName: "",
         Contact: "",
         Email: "",
         City: "",
-        PinCode: "",
         State: "",
-        Purpose: "",
         Message: "",
       });
       setErrors({});
       handleModalClose();
     }
+    else {
+      setResultMessage("Failed to send email. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    setResultMessage("An error occurred. Please try again.");
+  }
   };
+
 
   return (
     <>
@@ -101,9 +130,6 @@ const MainBanner: React.FC = () => {
           <div className="d-table-cell">
             <div className="container">
               <div className="main-banner-content">
-                <p>
-                  GET <span>READY</span> TO EMBRACE THE PURPLE VIBE
-                </p>
                 <p
                   style={{
                     fontSize: "15px",
@@ -119,20 +145,20 @@ const MainBanner: React.FC = () => {
                    
                     }}
                   >
-                  The Unmissable Celebration
+                   EMBRACE THE PURPLE VIBE
                   <br/>
-                   PURPLE JALLOSH - 2025
+                    PURPLE JALLOSH - 2025
                   </span>
                   <br />
                 </p>
 
                 <ul>
-                  <li>
-                    <i className="icofont-compass"></i> Venue- Auto Cluster Exhibition
-                     Ground PCMC Pune 
+                  <li style={{fontSize:"20px"}}>
+                    <i className="icofont-compass" ></i> Venue - Auto Cluster Exhibition
+                     Ground, PCMC, Pune
                   </li>
-                  <li>
-                    <i className="icofont-calendar"></i> 17-19 Jan, 2025
+                  <li style={{fontSize:"20px"}}>
+                    <i className="icofont-calendar"></i> 17-19 January, 2025
                   </li>
                 </ul>
 
@@ -197,89 +223,108 @@ const MainBanner: React.FC = () => {
       <Modal show={showModal} onHide={handleModalClose}>
               <Modal.Header closeButton>
                 <Modal.Title
-                style={{
-                  textAlign: "center",
-                  width: "100%",
-                  fontSize: "1.5rem",
-                  color: "#000",
-                  
-                }}
+                  style={{
+                    textAlign: "center",
+                    width: "100%",
+                    fontSize: "1.5rem",
+                    color: "#000",
+                  }}
                 >
-                  Registration Form</Modal.Title>
+                  Registration Form
+                </Modal.Title>
               </Modal.Header>
-              <Modal.Body
-              style={{
-                background: "linear-gradient(to bottom, )", // Matching the blue gradient
-                borderRadius: "10px",
-              }}
-              >
+              <Modal.Body>
                 <Form onSubmit={handleFormSubmit}>
-                <Form.Group className="mb-3 text-center" >
-                 <Form.Label>I am Registering As</Form.Label>
-                 <Form.Select
-                  name="category" style={{border:"1px Solid grey" ,borderRadius:"7px"}}
-                  value={formData.category}
-                  onChange={handleInputChange}
-                  >
-                  <option value="">Select Category </option>
-                  <option value="Delegate (Professional/Corporate Representative)">Delegate (Professional/Corporate Representative)</option>
-                  <option value="Educational Institution Representative">Educational Institution Representative</option>
-                  <option value="Healthcare Professional">Healthcare Professional</option>
-                  <option value="Media/Influencer">Media/Influencer</option>
-                  <option value="NGO/School Representative">NGO/School Representative</option>
-                  <option value="Parent or Caregiver">Parent or Caregiver</option>
-                  <option value="Visitor">Visitor</option>
-                 </Form.Select>
-                 {errors.category && (
-                   <small className="text-danger">{errors.category}</small>
-                   )}
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Purpose</Form.Label>
+                  <Form.Group className="mb-3 text-center">
+                    <Form.Label>I am Registering As</Form.Label>
                     <Form.Select
-                      name="Purpose" style={{border:"1px Solid grey" ,borderRadius:"7px"}}
-                      value={formData.Purpose}
+                      name="category"
+                      style={{ border: "1px Solid grey", borderRadius: "7px" }}
+                      value={formData.category}
                       onChange={handleInputChange}
                     >
-                      <option value="">Select Purpose</option>
-                      <option value="Learn about Accessibilty and Inclusion">
-                      Learn about Accessibilty and Inclusion
+                      <option value="">Select Category</option>
+                      <option value="Delegate (Professional/Corporate Representative)">
+                        Delegate (Professional/Corporate Representative)
                       </option>
-                      <option value="Media Coverage">
-                      Media Coverage
+                      <option value="Educational Institution Representative">
+                        Educational Institution Representative
                       </option>
-                      <option value="Network and Collaborate">Network and Collaborate</option>
-                      <option value="Participate in Workshops and experince zones">Participate in Workshops and experince zones</option>
-                      <option value="Volunteer">Volunteer</option>
+                      <option value="Healthcare Professional">
+                        Healthcare Professional
+                      </option>
+                      <option value="Media/Influencer">Media/Influencer</option>
+                      <option value="NGO/School Representative">
+                        NGO/School Representative
+                      </option>
+                      <option value="Parent or Caregiver">Parent or Caregiver</option>
+                      <option value="Visitor">Visitor</option>
                     </Form.Select>
-                    {errors.Purpose && (
-                      <small className="text-danger">{errors.Purpose}</small>
-                    )}
+                    {errors.category && <small className="text-danger">{errors.category}</small>}
                   </Form.Group>
+      
                   {Object.keys(formData).map((field) =>
-                    field !== "category" && field !== "Purpose" ? (
+                    field !== "category" && field !== "State" && field !== "City" ? (
                       <Form.Group className="mb-3" key={field}>
                         <Form.Control
-                          type="text" style={{border:"1px Solid grey" ,borderRadius:"5px"}}
+                          type="text"
+                          style={{ border: "1px Solid grey", borderRadius: "5px" }}
                           placeholder={field.replace(/([A-Z])/g, " $1")}
                           name={field}
                           value={formData[field as keyof typeof formData]}
-                          // onChange={handleInputChange}
+                          onChange={(e) =>
+                            handleInputChange(e as React.ChangeEvent<HTMLInputElement>)
+                          }
                         />
-                        {errors[field] && (
-                          <small className="text-danger">{errors[field]}</small>
-                        )}
+                        {errors[field] && <small className="text-danger">{errors[field]}</small>}
                       </Form.Group>
                     ) : null
                   )}
+      
+                  <Form.Group className="mb-3">
+                    <Form.Select
+                      name="State"
+                      style={{ border: "1px Solid grey", borderRadius: "7px" }}
+                      value={formData.State}
+                      onChange={handleInputChange}
+                    >
+                      <option value="">Select State</option>
+                      {Object.keys(statesAndCities).map((state) => (
+                        <option key={state} value={state}>
+                          {state}
+                        </option>
+                      ))}
+                    </Form.Select>
+                    {errors.State && <small className="text-danger">{errors.State}</small>}
+                  </Form.Group>
+      
+                  <Form.Group className="mb-3">
+                    <Form.Select
+                      name="City"
+                      style={{ border: "1px Solid grey", borderRadius: "7px" }}
+                      value={formData.City}
+                      onChange={handleInputChange}
+                      disabled={!cities.length}
+                    >
+                      <option value="">Select City</option>
+                      {cities.map((city) => (
+                        <option key={city} value={city}>
+                          {city}
+                        </option>
+                      ))}
+                    </Form.Select>
+                    {errors.City && <small className="text-danger">{errors.City}</small>}
+                  </Form.Group>
+      
                   <div style={{ display: "flex", justifyContent: "center" }}>
-                  <Button variant="primary" type="submit" style={{ width: "40%" }}>
-                   Submit
-                  </Button>
+                    <Button variant="primary" type="submit" style={{ width: "40%" }}>
+                      Submit
+                    </Button>
                   </div>
                 </Form>
               </Modal.Body>
             </Modal>
+      {resultMessage && <p className="text-center mt-3">{resultMessage}</p>}
     </>
   );
 };
