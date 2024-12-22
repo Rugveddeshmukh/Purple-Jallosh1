@@ -1,573 +1,209 @@
-"use client";
-import { useState, useEffect } from "react";
+"use client"; // Ensure this is a client-side component
 
-// Define types for Stall
-interface Stall {
-  id?: number;
-  title?:string;
-  color: string;
-}
+import React, { useState } from "react";
+import { Modal, Button, TextField, Box } from "@mui/material";
+import Image from "next/image"; // For optimized image loading
 
-interface RegistrationFormData {
-  fullName: string;
-  contact: string;
-  email: string;
-  organizer: string;
-  city: string;
-  state: string;
-}
-
-function App() {
-  const stalls: Stall[] = [
-    { id: 30, color: "yellow" },
-    { id: 29, color: "yellow" },
-    { id: 28, color: "yellow" },
-    { id: 27, color: "yellow" },
-    { id: 26, color: "yellow" },
-    { title: "Emergency Exit", color: "white" },  // Added title for entry gate
-    { id: 25, color: "yellow" }, 
-    { id: 24, color: "yellow" },
-    { id: 23, color: "yellow" },
-    { id: 22, color: "yellow" },
-    { id: 21, color: "yellow" },
-    { id: 20, color: "yellow" },
-    { id: 19, color: "yellow" },
-    { id: 18, color: "yellow" },
-    { id: 17, color: "yellow" },
-    { id: 16, color: "yellow" },
-    { id: 15, color: "yellow" },
-    { id: 14, color: "yellow" },
-    { id: 13, color: "yellow" },
-    { id: 12, color: "yellow" },
-    { id: 11, color: "yellow" },
-    { id: 10, color: "yellow" },
-    { id: 9, color: "yellow" },
-    { id: 8, color: "yellow" },
-    { id: 31, color: "skyblue" },
-    { id: 32, color: "skyblue" },
-    { id: 7, color: "skyblue" },
-    { id: 6, color: "skyblue" },
-    { id: 6, color: "skyblue" },
-    { id: 33, color: "green" },
-    { id: 34, color: "yellow" },
-    { id: 35, color: "yellow" },
-    { id: 36, color: "yellow" },
-    { id: 37, color: "yellow" },
-    { id: 38, color: "yellow" },
-    { id: 39, color: "yellow" },
-    { id: 40, color: "yellow" },
-    { id: 41, color: "yellow" },
-    { id: 42, color: "yellow" },
-    { id: 43, color: "yellow" },
-    { id: 44, color: "yellow" },
-    { id: 45, color: "yellow" },
-    { id: 46, color: "yellow" },
-    { id: 47, color: "yellow" },
-    { id: 48, color: "yellow" },
-    { id: 49, color: "yellow" },
-    { id: 50, color: "yellow" },
-    { title: "", color: "white" }, // Entry added her
-    { id: 1, color: "yellow" },
-    { id: 2, color: "yellow" },
-    { id: 3, color: "yellow" },
-    { id: 4, color: "yellow" },
-    { id: 5, color: "green" },
-  ];
-
-  const innerStalls: Stall[] = [
-    { id: 62, color: "white" },
-    { id: 63, color: "white" },
-    { id: 64, color: "white" },
-    { id: 61, color: "white" },
-    { id: 60, color: "white" },
-    { id: 59, color: "white" },
-    { id: 65, color: "white" },
-    { id: 66, color: "white" },
-    { id: 58, color: "white" },
-    { id: 57, color: "white" },
-    { id: 67, color: "white" },
-    { id: 68, color: "white" },
-    { id: 56, color: "white" },
-    { id: 55, color: "white" },
-    { id: 69, color: "white" },
-    { id: 70, color: "white" },
-    { id: 54, color: "white" },
-    { id: 53, color: "white" },
-    { id: 71, color: "white" },
-    { id: 72, color: "white" },
-    { id: 52, color: "white" },
-    { id: 51, color: "white" },
-  ];
-
-  const [showForm, setShowForm] = useState<boolean>(false);
-  const [selectedStall, setSelectedStall] = useState<Stall | null>(null);
-  const [formData, setFormData] = useState<RegistrationFormData>({
-    fullName: "",
-    contact: "",
-    email: "",
-    organizer: "",
-    city: "",
-    state: "",
+const StallBooking = () => {
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState<string | null>(null); // To hold the uploaded image
+  const [formData, setFormData] = useState({
+    StallNo: "",
+    FullName: "",
+    Contact: "",
+    Email: "",
   });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [resultMessage, setResultMessage] = useState<string>("");
 
-  const handleStallClick = (stall: Stall) => {
-    setSelectedStall(stall);
-    setShowForm(true);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  // Handle image upload
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setImage(URL.createObjectURL(file)); // Show the selected image in the preview
+    }
   };
 
+  // Handle form input changes
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    field: keyof RegistrationFormData
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
+    const { name, value } = e.target;
+
     setFormData({
       ...formData,
-      [field]: e.target.value,
+      [name]: value,
     });
-  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form Submitted", formData);
-    // You can now process the form data (e.g., save to a database, API request)
-    setShowForm(false); // Hide form after submission
-  };
-
-  const layoutContainerStyle: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    // width: "calc(100% - 200px)",
-    maxWidth: "1250px",
-    margin: "0 auto",
-    border: "5px solid black",
-    padding: "10px",
-    backgroundColor: "#f5f5f5",
-    justifyContent: "center",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-  };
-
-  const rowStyle: React.CSSProperties = {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-  };
-
-  const useWindowWidth1 = () => {
-    const [windowWidth, setWindowWidth] = useState<number>(0);
-  
-    useEffect(() => {
-      // Check if window is available (i.e., running in the browser)
-      if (typeof window !== "undefined") {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        handleResize(); // Set initial window width
-        window.addEventListener("resize", handleResize);
-        
-        return () => window.removeEventListener("resize", handleResize);
-      }
-    }, []);
-  
-    return windowWidth;
-  };
-  
-  const columnStyle: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
-    margin: "0 230px",
-  };
-  // Mobile adjustments
-if (useWindowWidth1() < 768) {
-  columnStyle.margin = "0 30px"; // Adjust margin for mobile view
-}
-
-
-  const middleSectionStyle: React.CSSProperties = {
-    display: "flex",
-    margin: "40px 0",
-  };
-
-
-  const useWindowWidth = () => {
-    const [windowWidth, setWindowWidth] = useState<number>(0);
-  
-    useEffect(() => {
-      if (typeof window !== "undefined") {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        handleResize(); // Set initial window width
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }
-    }, []);
-  
-    return windowWidth;
-  };
-  
-  const StallStyle = (color: string): React.CSSProperties => {
-    const windowWidth = useWindowWidth();
-  
-    const baseStyle: React.CSSProperties = {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "1px solid black",
-      borderRadius: "4px",
-      fontSize: "12px",
-      width: "50px",
-      height: "50px",
-      backgroundColor: color,
-      fontWeight: "bold",
-      color: color === "black" ? "white" : "black",
-      textAlign: "center",
-    };
-  
-    if (windowWidth < 768) {
-      return {
-        ...baseStyle,
-        width: "20px",
-        height: "20px",
-        fontSize: "10px",
-      };
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
     }
-  
-    return baseStyle;
   };
+
+  // Validate the form
+  const validateForm = () => {
+    const validationErrors: { [key: string]: string } = {};
+    Object.entries(formData).forEach(([key, value]) => {
+      if (!value) validationErrors[key] = "* Required";
+    });
+    return validationErrors;
+  };
+
+  // Handle form submission
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    // Web3Forms API submission
+    const form = new FormData();
+    form.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320"); // Replace with your Web3Forms access key
+    Object.entries(formData).forEach(([key, value]) =>
+      form.append(key, value)
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage("Registration successful! Email sent.");
+        setFormData({
+          StallNo: "",
+          FullName: "",
+          Contact: "",
+          Email: "",
+        });
+        setErrors({});
+        handleClose();
+      } else {
+        setResultMessage("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResultMessage("An error occurred. Please try again.");
+    }
+  };
+
   return (
-    <>
-      <h1 style={{ textAlign: "center", color: "#000" }}>Stall Booking Hall A</h1>
-      <div style={layoutContainerStyle}>
-        {/* Top Yellow Stalls */}
-        <div style={rowStyle}>
-          {stalls.slice(0, 24).map((stall) => (
-           
-            <div key={stall.id} style={StallStyle(stall.color)}
-            onClick={() => handleStallClick(stall)}
-            >
-              {stall.id} {stall.title}
-            </div>
-          ))}
-        </div>
-
-        {/* Middle Section */}
-        <div style={middleSectionStyle}>
-          {/* Left Blue Stalls */}
-          <div style={columnStyle}>
-            {stalls.slice(24, 26).map((stall) => (
-              <div key={stall.id} style={StallStyle(stall.color)}
-              onClick={() => handleStallClick(stall)}
-              >
-                {stall.id}
-              </div>
-            ))}
-          </div>
-
-          {/* Inner White Stalls - 5 Blocks Division */}
-          <div style={{ display: "flex", gap: "15px" }}>
-            {/* Block 1: Top-Left */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(0, 3).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(3, 6).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Block 2: Center-Left */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(6, 8).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(8, 10).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Block 3: Center-Right */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(10, 12).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(12, 14).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Block 4: Top-Right */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(14, 16).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(16, 18).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Block 5: Far-Right */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(18, 20).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: "5px" }}>
-                {innerStalls.slice(20, 22).map((stall) => (
-                  <div key={stall.id} style={StallStyle(stall.color)}
-                  onClick={() => handleStallClick(stall)}
-                  >
-                    {stall.id}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Blue Stalls */}
-          <div style={columnStyle}>
-            {stalls.slice(26, 28).map((stall) => (
-              <div key={stall.id} style={StallStyle(stall.color)}
-              onClick={() => handleStallClick(stall)}
-              >
-                {stall.id}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom Green and Yellow Stalls */}
-        <div style={rowStyle}>
-          {stalls.slice(29).map((stall, index) => (
-            <div
-              key={stall.id ?? `no-id-${index}`}
-              style={StallStyle(stall.color)}
-              onClick={() => handleStallClick(stall)}
-            >
-              {stall.id || ""}
-            </div>
-          ))}
-        </div>
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      {/* Image Upload Preview */}
+      <div style={{ marginBottom: "10px" }}>
+        <Image
+          src={image || "/images/Hall A.jpg"} // Use uploaded image or fallback to static import
+          alt="Stall Layout"
+          width={1000} // Image width
+          height={800} // Image height
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
       </div>
 
-      {/* Registration Form */}
-      {showForm && selectedStall && (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "100vh",
-            backgroundColor: "#f0f0f0",
+      {/* Book Stall Button */}
+      <Button
+        variant="contained"
+        style={{ marginBottom: "10px", backgroundColor: "rgb(78,34,111)" }}
+        onClick={handleOpen}
+      >
+        Book Stall
+      </Button>
+
+      <h6><b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}</h6>
+
+      {/* Modal for Registration Form */}
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "white",
+            padding: "20px",
+            borderRadius: "8px",
+            width: "300px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#fff",
-              padding: "20px",
-              borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              width: "400px",
-            }}
-          >
-            <h2 style={{ textAlign: "center" }}>Register for Stall {selectedStall.id}</h2>
-            <form onSubmit={handleSubmit}>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  Full Name:
-                </label>
-                <input
-                  type="text"
-                  value={formData.fullName}
-                  onChange={(e) => handleInputChange(e, "fullName")}
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  Contact:
-                </label>
-                <input
-                  type="text"
-                  value={formData.contact}
-                  onChange={(e) => handleInputChange(e, "contact")}
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  E-mail:
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange(e, "email")}
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  Organizer:
-                </label>
-                <input
-                  type="text"
-                  value={formData.organizer}
-                  onChange={(e) => handleInputChange(e, "organizer")}
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  City:
-                </label>
-                <input
-                  type="text"
-                  value={formData.city}
-                  onChange={(e) => handleInputChange(e, "city")}
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ marginBottom: "15px" }}>
-                <label style={{ display: "block", marginBottom: "5px" }}>
-                  State:
-                </label>
-                <input
-                  type="text"
-                  value={formData.state}
-                  onChange={(e) => handleInputChange(e, "state")}
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                />
-              </div>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
-               <button
-                type="submit"
-                 style={{
-                 width: "60%",
-                 padding: "10px",
-                 backgroundColor: "purple",
-                 color: "white",
-                 border: "none",
-                 borderRadius: "5px",
-                 cursor: "pointer",
-              }}
-               >
-                Submit
-               </button>
-              </div>
-               
-            </form>
-          </div>
-        </div>
-      )}
-    </>
+          <h3>Register for Stall</h3>
+          {/* Registration Form */}
+          <form onSubmit={handleFormSubmit}>
+            <TextField
+              label="Stall No"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="StallNo"
+              value={formData.StallNo}
+              onChange={handleInputChange}
+              error={!!errors.StallNo}
+              helperText={errors.StallNo}
+              required
+            />
+            <TextField
+              label="Full Name"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="FullName"
+              value={formData.FullName}
+              onChange={handleInputChange}
+              error={!!errors.FullName}
+              helperText={errors.FullName}
+              required
+            />
+            <TextField
+              label="Contact Number"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="Contact"
+              value={formData.Contact}
+              onChange={handleInputChange}
+              error={!!errors.Contact}
+              helperText={errors.Contact}
+              required
+            />
+            <TextField
+              label="Email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="Email"
+              value={formData.Email}
+              onChange={handleInputChange}
+              error={!!errors.Email}
+              helperText={errors.Email}
+              required
+            />
+            <Button
+              variant="contained"
+              fullWidth
+              style={{ marginTop: "20px", backgroundColor: "rgb(78,34,111)" }}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </form>
+        </Box>
+      </Modal>
+
+      {resultMessage && <p style={{ marginTop: "20px" }}>{resultMessage}</p>}
+    </div>
   );
+};
 
-}
-
-<style>
-  {`
-    @media (max-width: 768px) {
-      div[style*="display: flex"] {
-        flex-direction: column;
-        gap: 10px;
-      }
-      div[style*="flex: 1 1 30%"] {
-        flex: 1 1 100%;
-      }
-      div[style*="gap: 5px"] {
-        gap: 10px;
-      }
-      div[style*="display: flex; flexDirection: column"] {
-        gap: 10px;
-      }
-      div[style*="flex-direction: column"] {
-        display: block;
-      }
-    }
-  `}
-</style>
-export default App;
+export default StallBooking;

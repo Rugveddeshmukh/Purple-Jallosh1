@@ -24,7 +24,7 @@ const PurpleJalloshDetails: React.FC = () => {
   };
 
   const titleStyle: React.CSSProperties = {
-    fontSize: '1.5rem',
+    fontSize: '1rem',
     color: '#000',
     marginBottom: '10px',
   };
@@ -32,6 +32,7 @@ const PurpleJalloshDetails: React.FC = () => {
   const listStyle: React.CSSProperties = {
     paddingLeft: '20px',
     listStyleType: 'disc',
+    color:'#707070'
   };
 
   const paragraphStyle: React.CSSProperties = {

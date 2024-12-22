@@ -21,15 +21,15 @@ const AboutUsContent: React.FC = () => {
 
                  <p style={{ fontSize: "40px", fontWeight: "bold",color:"rgb(78,34,111)" }}>Why Attend Purple Jallosh?</p>
                  <p>
-                 <li style={{fontWeight:'600',color:'black'}}>Unmatched Celebration:- </li>Three days of inspiring activities, performances, and connections showcasing inclusion, assistive technologies, and stories of resilience. 
+                 <li style={{fontWeight:'600',color:'black'  }}>Unmatched Celebration </li>Three days of inspiring activities, performances, and connections showcasing inclusion, assistive technologies, and stories of resilience. 
+                 <br/> <br/>  
+                 <li style={{fontWeight:'600',color:'black'}}>Inspiring Keynote Speakers</li> Hear from visionaries and leaders shaping accessibility and inclusion, sharing insights and innovations empowering PwDs.
                  <br/> <br/>
-                 <li style={{fontWeight:'600',color:'black'}}>Inspiring Keynote Speakers:-</li> Hear from visionaries and leaders shaping accessibility and inclusion, sharing insights and innovations empowering PwDs.
+                 <li style={{fontWeight:'600',color:'black'}}> Interactive Workshops </li>Join hands-on workshops in universal design, assistive tech, and creative arts. Learn, collaborate, and connect with a purpose-driven community.
                  <br/> <br/>
-                 <li style={{fontWeight:'600',color:'black'}}> Interactive Workshops:- </li>Join hands-on workshops in universal design, assistive tech, and creative arts. Learn, collaborate, and connect with a purpose-driven community.
+                 <li style={{fontWeight:'600',color:'black'}}>Networking Opportunities</li> Connect with individuals, organizations, and professionals dedicated to inclusion—whether youre an innovator, volunteer, or leader, theres a place for you.
                  <br/> <br/>
-                 <li style={{fontWeight:'600',color:'black'}}>Networking Opportunities:-</li> Connect with individuals, organizations, and professionals dedicated to inclusion—whether youre an innovator, volunteer, or leader, theres a place for you.
-                 <br/> <br/>
-                 <li style={{fontWeight:'600',color:'black'}}> Support Local Initiatives:-</li> Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.
+                 <li style={{fontWeight:'600',color:'black'}}> Support Local Initiatives </li> Support local NGOs and self-help groups driving change, empowering the PwD community through unique initiatives.
                  </p>
               </div>
             </div>

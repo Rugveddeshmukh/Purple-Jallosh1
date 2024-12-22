@@ -66,7 +66,7 @@ const WhyUs: React.FC = () => {
           <div
             className="single-box"
             style={{
-              height: "250px",
+              height: "110px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

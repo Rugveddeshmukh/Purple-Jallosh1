@@ -17,20 +17,50 @@ const Navbar: React.FC = () => {
     Email: "",
     City: "",
     State: "",
-    Message: "",
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [resultMessage, setResultMessage] = useState<string>("");
   const [cities, setCities] = useState<string[]>([]);
 
-  const statesAndCities: { [key: string]: string[] } = {
-    Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-    Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
-    Karnataka: ["Bangalore", "Mysore", "Mangalore"],
-    Delhi: ["New Delhi"],
-  };
-
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu",
+    "Delhi",
+    "Jammu and Kashmir",
+    "Ladakh",
+    "Lakshadweep",
+    "Puducherry",
+  ];
   const toggleNavbar = () => {
     setMenu(!menu);
   };
@@ -47,9 +77,8 @@ const Navbar: React.FC = () => {
       setFormData((prev) => ({
         ...prev,
         State: value,
-        City: "", // Reset city when state changes
+  
       }));
-      setCities(statesAndCities[value] || []);
     } else {
       setFormData({
         ...formData,
@@ -66,13 +95,11 @@ const Navbar: React.FC = () => {
   };
 
   const validateForm = () => {
-    const errors: { [key: string]: string } = {};
-    for (const [key, value] of Object.entries(formData)) {
-      if (!value && key !== "Message") {
-        errors[key] = "* Required";
-      }
-    }
-    return errors;
+    const validationErrors: { [key: string]: string } = {};
+    Object.entries(formData).forEach(([key, value]) => {
+      if (!value) validationErrors[key] = "* Required";
+    });
+    return validationErrors;
   };
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -107,7 +134,6 @@ const Navbar: React.FC = () => {
           Email: "",
           City: "",
           State: "",
-          Message: "",
         });
         setErrors({});
         handleModalClose();
@@ -251,7 +277,7 @@ const Navbar: React.FC = () => {
             </Form.Group>
 
             {Object.keys(formData).map((field) =>
-              field !== "category" && field !== "State" && field !== "City" ? (
+              field !== "category" && field !== "State" ? (
                 <Form.Group className="mb-3" key={field}>
                   <Form.Control
                     type="text"
@@ -276,7 +302,7 @@ const Navbar: React.FC = () => {
                 onChange={handleInputChange}
               >
                 <option value="">Select State</option>
-                {Object.keys(statesAndCities).map((state) => (
+                {states.map((state) => (
                   <option key={state} value={state}>
                     {state}
                   </option>
@@ -285,23 +311,6 @@ const Navbar: React.FC = () => {
               {errors.State && <small className="text-danger">{errors.State}</small>}
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Select
-                name="City"
-                style={{ border: "1px Solid grey", borderRadius: "7px" }}
-                value={formData.City}
-                onChange={handleInputChange}
-                disabled={!cities.length}
-              >
-                <option value="">Select City</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </Form.Select>
-              {errors.City && <small className="text-danger">{errors.City}</small>}
-            </Form.Group>
 
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button variant="primary" type="submit" style={{ width: "40%" }}>

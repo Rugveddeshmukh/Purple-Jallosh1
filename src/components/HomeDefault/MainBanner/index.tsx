@@ -21,7 +21,7 @@ const MainBanner: React.FC = () => {
     Email: "",
     City: "",
     State: "",
-    Message: "",
+    
   });
 
   // State for form validation
@@ -29,13 +29,44 @@ const MainBanner: React.FC = () => {
   const [resultMessage, setResultMessage] = useState<string>("");
   const [cities, setCities] = useState<string[]>([]);
   
-    const statesAndCities: { [key: string]: string[] } = {
-      Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-      Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
-      Karnataka: ["Bangalore", "Mysore", "Mangalore"],
-      Delhi: ["New Delhi"],
-    };
-
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu",
+    "Delhi",
+    "Jammu and Kashmir",
+    "Ladakh",
+    "Lakshadweep",
+    "Puducherry",
+  ];
 
   // Modal Handlers
   const handleModalOpen = () => setShowModal(true);
@@ -96,7 +127,7 @@ const MainBanner: React.FC = () => {
         Email: "",
         City: "",
         State: "",
-        Message: "",
+        
       });
       setErrors({});
       handleModalClose();
@@ -114,10 +145,10 @@ const MainBanner: React.FC = () => {
   return (
     <>
       {/* Lightbox */}
-      <FsLightbox
+       <FsLightbox
         toggler={toggler}
         sources={["https://www.youtube.com/watch?v=ML76DRU-c6U"]}
-      />
+      /> 
 
       {/* Banner */}
       <div
@@ -169,12 +200,12 @@ const MainBanner: React.FC = () => {
                   >
                     Register Now
                   </button>
-                  <div
+                  {/* <div
                     onClick={() => setToggler(!toggler)}
                     className="video-btn d-sm-inline"
                   >
                     <i className="icofont-ui-play"></i> Watch Promo Video
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -264,7 +295,7 @@ const MainBanner: React.FC = () => {
                   </Form.Group>
       
                   {Object.keys(formData).map((field) =>
-                    field !== "category" && field !== "State" && field !== "City" ? (
+                    field !== "category" && field !== "State" ? (
                       <Form.Group className="mb-3" key={field}>
                         <Form.Control
                           type="text"
@@ -289,7 +320,7 @@ const MainBanner: React.FC = () => {
                       onChange={handleInputChange}
                     >
                       <option value="">Select State</option>
-                      {Object.keys(statesAndCities).map((state) => (
+                      {states.map((state) => (
                         <option key={state} value={state}>
                           {state}
                         </option>
@@ -297,25 +328,6 @@ const MainBanner: React.FC = () => {
                     </Form.Select>
                     {errors.State && <small className="text-danger">{errors.State}</small>}
                   </Form.Group>
-      
-                  <Form.Group className="mb-3">
-                    <Form.Select
-                      name="City"
-                      style={{ border: "1px Solid grey", borderRadius: "7px" }}
-                      value={formData.City}
-                      onChange={handleInputChange}
-                      disabled={!cities.length}
-                    >
-                      <option value="">Select City</option>
-                      {cities.map((city) => (
-                        <option key={city} value={city}>
-                          {city}
-                        </option>
-                      ))}
-                    </Form.Select>
-                    {errors.City && <small className="text-danger">{errors.City}</small>}
-                  </Form.Group>
-      
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <Button variant="primary" type="submit" style={{ width: "40%" }}>
                       Submit

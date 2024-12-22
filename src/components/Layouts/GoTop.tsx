@@ -17,7 +17,7 @@ const GoTop: React.FC = () => {
   }, []);
 
   const openWhatsApp = () => {
-    const phoneNumber = "9768606974"; // Replace with your WhatsApp number
+    const phoneNumber = "8600212505"; // Replace with your WhatsApp number
     const message = "Hello! I need assistance.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };

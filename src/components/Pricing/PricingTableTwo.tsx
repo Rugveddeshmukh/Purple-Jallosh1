@@ -1,139 +1,209 @@
-"use client";
+"use client"; // Ensure this is a client-side component
 
-import React, { useState } from 'react';
-import './PricingTableTwo.css';
+import React, { useState } from "react";
+import { Modal, Button, TextField, Box } from "@mui/material";
+import Image from "next/image"; // For optimized image loading
 
-const StallGrid: React.FC = () => {
-  // State to track form visibility and selected stall number
-  const [isFormVisible, setIsFormVisible] = useState(false);
-  const [selectedStall, setSelectedStall] = useState<number | null>(null);
+const StallBooking = () => {
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState<string | null>(null); // To hold the uploaded image
+  const [formData, setFormData] = useState({
+    StallNo: "",
+    FullName: "",
+    Contact: "",
+    Email: "",
+  });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [resultMessage, setResultMessage] = useState<string>("");
 
-  // Function to handle stall click
-  const handleStallClick = (stallNumber: number) => {
-    setSelectedStall(stallNumber); // Set the clicked stall number
-    setIsFormVisible(true); // Show the form
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  // Handle image upload
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setImage(URL.createObjectURL(file)); // Show the selected image in the preview
+    }
   };
 
-  // Function to close the form
-  const handleCloseForm = () => {
-    setIsFormVisible(false);
-    setSelectedStall(null);
+  // Handle form input changes
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
+  };
+
+  // Validate the form
+  const validateForm = () => {
+    const validationErrors: { [key: string]: string } = {};
+    Object.entries(formData).forEach(([key, value]) => {
+      if (!value) validationErrors[key] = "* Required";
+    });
+    return validationErrors;
+  };
+
+  // Handle form submission
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    // Web3Forms API submission
+    const form = new FormData();
+    form.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320"); // Replace with your Web3Forms access key
+    Object.entries(formData).forEach(([key, value]) =>
+      form.append(key, value)
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage("Registration successful! Email sent.");
+        setFormData({
+          StallNo: "",
+          FullName: "",
+          Contact: "",
+          Email: "",
+        });
+        setErrors({});
+        handleClose();
+      } else {
+        setResultMessage("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResultMessage("An error occurred. Please try again.");
+    }
   };
 
   return (
-    <>
-    <h1 style={{ textAlign: "center", color: "#000" }}>Stall Booking Hall B </h1>
-    <div className="grid-container">
-      {/* Top Row */}
-      <div className="top-row">
-        {[4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
-          <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-            {num}
-          </button>
-        ))}
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      {/* Image Upload Preview */}
+      <div style={{ marginBottom: "10px" }}>
+        <Image
+          src={image || "/images/Hall B.jpg"} // Use uploaded image or fallback to static import
+          alt="Stall Layout"
+          width={1000} // Image width
+          height={800} // Image height
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
       </div>
 
-      {/* Row Container with Left Column, Middle Content, and Right Column */}
-      <div className="row-container">
-        {/* Left Column */}
-        <div className="left-column">
-          {[3, 2, 1].map((num) => (
-            <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-              {num}
-            </button>
-          ))}
-        </div>
+      {/* Book Stall Button */}
+      <Button
+        variant="contained"
+        style={{ marginBottom: "10px", backgroundColor: "rgb(78,34,111)" }}
+        onClick={handleOpen}
+      >
+        Book Stall
+      </Button>
 
-        {/* Center Content */}
-        <div className="center-content">
-          {/* Second Row */}
-          <div className="second-row">
-            {[22, 21, 20, 19, 18, 17, 16, 15, 14].map((num) => (
-              <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-                {num}
-              </button>
-            ))}
-            {[23, 24, 25, 26, 27, 28, 29, 30, 31].map((num) => (
-              <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-                {num}
-              </button>
-            ))}
-          </div>
+      <h6><b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}</h6>
 
-          {/* Middle Row */}
-          <div className="middle-row">
-            {[40, 39, 38, 37, 36, 35, 34, 33, 32].map((num) => (
-              <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-                {num}
-              </button>
-            ))}
-            {[41, 42, 43, 44, 45, 46, 47, 48, 49].map((num) => (
-              <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-                {num}
-              </button>
-            ))}
-          </div>
+      {/* Modal for Registration Form */}
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "white",
+            padding: "20px",
+            borderRadius: "8px",
+            width: "300px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          }}
+        >
+          <h3>Register for Stall</h3>
+          {/* Registration Form */}
+          <form onSubmit={handleFormSubmit}>
+            <TextField
+              label="Stall No"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="StallNo"
+              value={formData.StallNo}
+              onChange={handleInputChange}
+              error={!!errors.StallNo}
+              helperText={errors.StallNo}
+              required
+            />
+            <TextField
+              label="Full Name"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="FullName"
+              value={formData.FullName}
+              onChange={handleInputChange}
+              error={!!errors.FullName}
+              helperText={errors.FullName}
+              required
+            />
+            <TextField
+              label="Contact Number"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="Contact"
+              value={formData.Contact}
+              onChange={handleInputChange}
+              error={!!errors.Contact}
+              helperText={errors.Contact}
+              required
+            />
+            <TextField
+              label="Email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              name="Email"
+              value={formData.Email}
+              onChange={handleInputChange}
+              error={!!errors.Email}
+              helperText={errors.Email}
+              required
+            />
+            <Button
+              variant="contained"
+              fullWidth
+              style={{ marginTop: "20px", backgroundColor: "rgb(78,34,111)" }}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </form>
+        </Box>
+      </Modal>
 
-          {/* Bottom Row */}
-          <div className="bottom-row">
-            {[59, 58, 57, 56, 55, 54, 53].map((num) => (
-              <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-                {num}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="right-column">
-          {[50, 51, 52].map((num) => (
-            <button className="stall" key={num} onClick={() => handleStallClick(num)}>
-              {num}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Inquiry Form Popup */}
-      {isFormVisible && (
-        <div className="form-popup">
-          <div className="form-content">
-            <h3>Registration Form </h3>
-            <p style={{fontSize:'15px'}}>Stall Number: {selectedStall}</p>
-            <form>
-              <label>
-               Full Name:
-                <input type="text" name="name" required />
-              </label>
-              <br />
-              <label>
-               Company/Organaization Name:
-                <input type="text" name="name" required />
-              </label>
-              <br />
-              <label>
-                Email:
-                <input type="email" name="email" required />
-              </label>
-              <br />
-              <label>
-                Mobile No.:
-                <input type="number" name="mobile" required />
-              </label>
-              <br />
-              <label>
-                City & State:
-                <input type="text" name="location" required />
-              </label>
-              <button type="submit">Submit</button>
-              <button type="button" onClick={handleCloseForm}>Close</button>
-            </form>
-          </div>
-        </div>
-      )}
+      {resultMessage && <p style={{ marginTop: "20px" }}>{resultMessage}</p>}
     </div>
-    </>
   );
 };
 
-export default StallGrid;
+export default StallBooking;

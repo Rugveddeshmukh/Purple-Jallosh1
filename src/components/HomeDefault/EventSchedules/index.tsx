@@ -21,21 +21,50 @@ const EventSchedules: React.FC = () => {
     Email: "",
     City: "",
     State: "",
-    Message: "",
   });
 
   // State for form validation errors
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [resultMessage, setResultMessage] = useState<string>("");
   const [cities, setCities] = useState<string[]>([]);
-    
-      const statesAndCities: { [key: string]: string[] } = {
-        Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-        Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
-        Karnataka: ["Bangalore", "Mysore", "Mangalore"],
-        Delhi: ["New Delhi"],
-      };
-
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu",
+    "Delhi",
+    "Jammu and Kashmir",
+    "Ladakh",
+    "Lakshadweep",
+    "Puducherry",
+  ];
 
   // Modal Handlers
   const handleModalOpen = () => setShowModal(true);
@@ -48,7 +77,6 @@ const EventSchedules: React.FC = () => {
       Email: "",
       City: "",
       State: "",
-      Message: "",
     });
     setErrors({});
   };
@@ -108,7 +136,6 @@ const EventSchedules: React.FC = () => {
         Email: "",
         City: "",
         State: "",
-        Message: "",
       });
       setErrors({});
       handleModalClose();
@@ -170,12 +197,12 @@ const EventSchedules: React.FC = () => {
 
             <div className="col-lg-12">
               <div className="btn-box">
-                <Link href="#" className="btn btn-primary">
+                {/* <Link href="#" className="btn btn-primary">
                   Download Schedule (PDF)
                 </Link>
                 <Link href="#" className="btn btn-secondary">
                   Connect Via Instagram
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -261,7 +288,7 @@ const EventSchedules: React.FC = () => {
                         </Form.Group>
             
                         {Object.keys(formData).map((field) =>
-                          field !== "category" && field !== "State" && field !== "City" ? (
+                          field !== "category" && field !== "State" ? (
                             <Form.Group className="mb-3" key={field}>
                               <Form.Control
                                 type="text"
@@ -286,31 +313,13 @@ const EventSchedules: React.FC = () => {
                             onChange={handleInputChange}
                           >
                             <option value="">Select State</option>
-                            {Object.keys(statesAndCities).map((state) => (
+                            {states.map((state) => (
                               <option key={state} value={state}>
                                 {state}
                               </option>
                             ))}
                           </Form.Select>
                           {errors.State && <small className="text-danger">{errors.State}</small>}
-                        </Form.Group>
-            
-                        <Form.Group className="mb-3">
-                          <Form.Select
-                            name="City"
-                            style={{ border: "1px Solid grey", borderRadius: "7px" }}
-                            value={formData.City}
-                            onChange={handleInputChange}
-                            disabled={!cities.length}
-                          >
-                            <option value="">Select City</option>
-                            {cities.map((city) => (
-                              <option key={city} value={city}>
-                                {city}
-                              </option>
-                            ))}
-                          </Form.Select>
-                          {errors.City && <small className="text-danger">{errors.City}</small>}
                         </Form.Group>
             
                         <div style={{ display: "flex", justifyContent: "center" }}>

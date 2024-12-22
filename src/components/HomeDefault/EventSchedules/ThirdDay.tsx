@@ -28,12 +28,9 @@ const ThirdDay: React.FC = () => {
 
   // Form data state
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     contact: "",
     email: "",
-    city: "",
-    pincode: "",
     state: "",
   });
   const [result, setResult] = React.useState("");
@@ -120,7 +117,7 @@ const ThirdDay: React.FC = () => {
               <div className="col-lg-6 col-md-7">
                 <div className="location">
                 <br/>
-                <b>(Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.){" "}
+                <b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}
                 </div>
               </div>
 
@@ -165,7 +162,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity1 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity1 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -243,7 +240,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity2 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity2 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -321,7 +318,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity3 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity3 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -398,7 +395,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity4 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity4 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -476,7 +473,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity5 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity5 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -554,7 +551,7 @@ const ThirdDay: React.FC = () => {
                     style={{
                       display: "inline-block",
                       padding: "10px 20px",
-                      backgroundColor: bookingLimitActivity6 > 0 ? "purple" : "gray",
+                      backgroundColor: bookingLimitActivity6 > 0 ? "rgb(78,34,111)" : "gray",
                       border: "none",
                       borderRadius: "5px",
                       textAlign: "center",
@@ -601,203 +598,150 @@ const ThirdDay: React.FC = () => {
       </Accordion>
 
       {/* Modal for Registration Form */}
-            {showForm && (
-              <div
-                style={{
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "rgba(0, 0, 0, 0.5)",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  zIndex: 1000,
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: "white",
-                    padding: "20px",
-                    borderRadius: "8px",
-                    width: "400px",
-                    maxHeight: "80vh", // Max height for the modal
-                    overflowY: "auto", // Enables scrolling within the modal if the content overflows
-                  }}
-                >
-                  
-      
-                  <h2 style={{ textAlign: "center", marginBottom: "20px", fontSize: "1.8rem" }}>
-                    Registration Form
-                  </h2>
-                  <form onSubmit={onSubmit}>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>First Name:</label>
-                      <input
-                        type="text"
-                        required
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>Last Name:</label>
-                      <input
-                        type="text"
-                        required
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>Contact:</label>
-                      <input
-                        type="text"
-                        required
-                        name="contact"
-                        value={formData.contact}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>Email:</label>
-                      <input
-                        type="email"
-                        required
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>City:</label>
-                      <input
-                        type="text"
-                        required
-                        name="city"
-                        value={formData.city}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>Pincode:</label>
-                      <input
-                        type="text"
-                        required
-                        name="pincode"
-                        value={formData.pincode}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <div style={{ marginBottom: "15px" }}>
-                      <label>State:</label>
-                      <input
-                        type="text"
-                        required
-                        name="state"
-                        value={formData.state}
-                        onChange={handleChange}
-                        style={{
-                          width: "100%",
-                          padding: "10px",
-                          marginTop: "0px",
-                          borderRadius: "4px",
-                          border: "1px solid #ccc",
-                        }}
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      style={{
-                        width: "100%",
-                        padding: "10px",
-                        backgroundColor: "purple",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "5px",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Submit
-                    </button>
-      
-                      {/* Buttons */}
-                    <div
-                       style={{
-                       display: "flex",
-                       justifyContent: "space-around",
-                       marginTop: "10px",
-                       
-                      }}
-                      >
-                      {/* Close Button */}
-                    <button
-                       type="button"
-                       onClick={() => {
-                       setShowForm(false);
-                      }}
-                       style={{
-                       padding: "10px 20px",
-                       backgroundColor: "gray",
-                       color: "white",
-                       border: "none",
-                       borderRadius: "3px",
-                       cursor: "pointer",
-                       width: "100%",
-                      }}
-                      >
-                    Close
-                 </button>
-                 </div>
-                 </form>   
-                </div>
-              </div>
-            )}
+      {showForm && (
+       <div
+        style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 1000,
+       }}
+      >
+       <div
+        style={{
+        backgroundColor: "white",
+        padding: "20px",
+        borderRadius: "8px",
+        width: "400px",
+        maxHeight: "80vh", // Max height for the modal
+        overflowY: "auto", // Enables scrolling within the modal if the content overflows
+        position: "relative", // Needed for the absolute position of the close button
+      }}
+    >
+       {/* Close Button */}
+        <button
+        type="button"
+         onClick={() => {
+          setShowForm(false);
+          }}
+          style={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          backgroundColor: "transparent",
+          border: "none",
+          fontSize: "2.5rem",
+          color: "gray",
+          cursor: "pointer",
+        }}
+      >
+        &times;
+      </button>
+
+        <h2 style={{ textAlign: "center", marginBottom: "20px", fontSize: "1.8rem" }}>
+          Registration Form
+       </h2>
+       <form onSubmit={onSubmit} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+        {/* Full Name */}
+        <input
+          type="text"
+          required
+          name="fullName"
+          value={formData.fullName}
+          onChange={handleChange}
+          placeholder="Full Name"
+          style={{
+            width: "100%",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            fontSize: "1rem",
+          }}
+        />
+        {/* Contact */}
+        <input
+          type="text"
+          required
+          name="contact"
+          value={formData.contact}
+          onChange={handleChange}
+          placeholder="Contact"
+          style={{
+            width: "100%",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            fontSize: "1rem",
+          }}
+        />
+        {/* Email */}
+        <input
+          type="email"
+          required
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+          style={{
+            width: "100%",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            fontSize: "1rem",
+          }}
+        />
+        {/* State */}
+        <input
+          type="text"
+          required
+          name="state"
+          value={formData.state}
+          onChange={handleChange}
+          placeholder="State"
+          style={{
+            width: "100%",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            fontSize: "1rem",
+          }}
+        />
+          {/* Centered Submit Button */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "15px",
+          }}
+          >
+        <button
+          type="submit"
+          style={{
+            padding: "10px",
+            backgroundColor: "purple",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            fontSize: "1rem",
+            cursor: "pointer",
+            width:"40%",
+            textAlign:"center",
+            
+          }}
+        >
+          Submit
+        </button>
+        </div>
+      </form>
+    </div>
+  </div>
+)}
       
            {/* Display QR Code after successful registration */}
            {qrCode && (
