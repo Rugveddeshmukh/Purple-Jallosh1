@@ -138,6 +138,22 @@ const StallBooking = () => {
             boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
           }}
         >
+          {/* Close Button */}
+          <button
+           onClick={handleClose}
+           style={{
+           position: "absolute",
+           top: "12px",
+           right: "10px",
+           background: "transparent",
+           border: "none",
+           fontSize: "30px",
+           color: "gray",
+           cursor: "pointer",
+           }}
+          >
+           &times;
+          </button>
           <h3>Register for Stall</h3>
           {/* Registration Form */}
           <form onSubmit={handleFormSubmit}>

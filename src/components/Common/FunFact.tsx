@@ -33,7 +33,9 @@ const FunFactData: FunFact[] = [
 const FunFact: React.FC = () => {
   return (
     <> 
-      <div className="section-title ms-lg-5 ms-md-3 ms-2 pt-3">
+      <div className="section-title ms-lg-5 ms-md-3 ms-2 pt-3"
+      style={{ zIndex: 0 }}
+      >
         <span className="d-block">Breaking Barriers</span>
           <h2>Building Dreams</h2>
       </div>

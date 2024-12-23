@@ -719,7 +719,7 @@ const SecondDay: React.FC = () => {
           type="submit"
           style={{
             padding: "10px",
-            backgroundColor: "purple",
+            backgroundColor: "rgb(78,34,111)",
             color: "white",
             border: "none",
             borderRadius: "5px",

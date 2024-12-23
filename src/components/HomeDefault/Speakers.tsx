@@ -61,7 +61,7 @@ const Speakers: React.FC = () => {
             {/* <div className="bg-title">Speakers</div> */}
 
             <Link href="/speakers" className="btn btn-primary w-full sm:w-auto">
-              View More Speakers
+              View More 
             </Link>
           </div>
         </div>
