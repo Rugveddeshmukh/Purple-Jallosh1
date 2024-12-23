@@ -56,10 +56,10 @@ const WhyUs: React.FC = () => {
 
   return (
     <>
-     <div className="section-title" style={{marginLeft:"70px"}}>
-       <span>Diversity Inclusion
-       </span>
-       <h2>Leadership - Impact</h2></div>
+        <div className="section-title ms-lg-5 ms-md-3 ms-2">
+            <span className="d-block">Diversity Inclusion</span>
+            <h2>Leadership - Impact</h2>
+        </div>
        <div className="bar"></div>
       <div className="why-choose-us">
       

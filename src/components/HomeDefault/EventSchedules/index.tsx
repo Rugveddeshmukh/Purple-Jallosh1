@@ -128,6 +128,7 @@ const EventSchedules: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
+        alert("Form submitted successfully!"); 
         setResultMessage("Registration successful! Email sent.");
         setFormData({
         category: "",
@@ -157,7 +158,7 @@ const EventSchedules: React.FC = () => {
           <div className="section-title">
             <span>Time Flow  </span>
             <h2>
-             <b>Event</b> <br /> Schedules
+             <b>Event</b> <br /> Schedule
             </h2>
             <div className="bg-title"></div>
             <div className="button-box">

@@ -66,7 +66,7 @@ const StallBooking = () => {
 
     // Web3Forms API submission
     const form = new FormData();
-    form.append("access_key", "6198e333-c721-47ec-bdd5-33e0493d7320"); // Replace with your Web3Forms access key
+    form.append("access_key", "c96e735a-d2d1-4cab-a5b9-a93bf3ba543c"); // Replace with your Web3Forms access key
     Object.entries(formData).forEach(([key, value]) =>
       form.append(key, value)
     );
@@ -80,6 +80,7 @@ const StallBooking = () => {
       const data = await response.json();
 
       if (data.success) {
+        alert("Form submitted successfully!");
         setResultMessage("Registration successful! Email sent.");
         setFormData({
           StallNo: "",
@@ -120,7 +121,7 @@ const StallBooking = () => {
         Book Stall
       </Button>
 
-      <h6><b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}</h6>
+      <h6 style={{fontSize:"12px",}}>Disclaimer: The Layout provided is tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}</h6>
 
       {/* Modal for Registration Form */}
       <Modal open={open} onClose={handleClose}>
@@ -192,7 +193,7 @@ const StallBooking = () => {
             <Button
               variant="contained"
               fullWidth
-              style={{ marginTop: "20px", backgroundColor: "rgb(78,34,111)" }}
+              style={{ marginTop: "20px", backgroundColor: "rgb(78,34,111)",width:"60%",marginLeft:"50px" }}
               type="submit"
             >
               Submit

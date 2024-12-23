@@ -55,6 +55,7 @@ const ThirdDay: React.FC = () => {
         const data = await response.json();
     
         if (data.success) {
+          alert("Form submitted successfully!"); 
           setResult("Form Submitted Successfully");
            console.log (result)
               setBookingLimitActivity1((prevLimit) => prevLimit - 1); // Reduce count for Activity 1

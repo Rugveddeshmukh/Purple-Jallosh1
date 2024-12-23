@@ -33,10 +33,10 @@ const FunFactData: FunFact[] = [
 const FunFact: React.FC = () => {
   return (
     <> 
-      <div className="section-title" style={{marginLeft:"70px" }}>
-       <span style={{paddingTop:"20px"}}>Breaking Barriers 
-       </span>
-       <h2>Building Dreams</h2></div>
+      <div className="section-title ms-lg-5 ms-md-3 ms-2 pt-3">
+        <span className="d-block">Breaking Barriers</span>
+          <h2>Building Dreams</h2>
+      </div>
       <div className="funfacts-area ptb-120">
         <div className="container">
           <div className="row justify-content-center">

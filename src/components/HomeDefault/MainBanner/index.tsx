@@ -11,7 +11,7 @@ import { url } from "inspector";
 const MainBanner: React.FC = () => {
   const [toggler, setToggler] = useState(false); // Lightbox toggler
   const [showModal, setShowModal] = useState(false); // Modal visibility
-
+  <button onClick={() => setToggler(!toggler)}>Open Video</button>;
 
   // State for form data
   const [formData, setFormData] = useState({
@@ -119,6 +119,7 @@ const MainBanner: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
+        alert("Form submitted successfully!"); 
         setResultMessage("Registration successful! Email sent.");
         setFormData({
         category: "",
@@ -147,7 +148,7 @@ const MainBanner: React.FC = () => {
       {/* Lightbox */}
        <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/watch?v=ML76DRU-c6U"]}
+        sources={["video/purple-jallosh.mp4"]}
       /> 
 
       {/* Banner */}
@@ -189,7 +190,7 @@ const MainBanner: React.FC = () => {
                      Ground, PCMC, Pune
                   </li>
                   <li style={{fontSize:"20px"}}>
-                    <i className="icofont-calendar"></i> 17-19 January, 2025
+                    <i className="icofont-calendar"></i> 17<sup>th</sup> - 19<sup>th</sup> January, 2025
                   </li>
                 </ul>
 
@@ -200,12 +201,12 @@ const MainBanner: React.FC = () => {
                   >
                     Register Now
                   </button>
-                  {/* <div
+                 <div
                     onClick={() => setToggler(!toggler)}
                     className="video-btn d-sm-inline"
                   >
                     <i className="icofont-ui-play"></i> Watch Promo Video
-                  </div> */}
+                  </div> 
                 </div>
               </div>
             </div>

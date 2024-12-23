@@ -19,7 +19,7 @@ interface SocialLink {
 
 const SpeakersMemberData: SpeakersMember[] = [
   {
-    image: "/images/Bhavesh Bhatiya-modified (1).PNG",
+    image: "/images/Bhavesh Bhatiya-modified (1).png",
     name: "Bhavesh Bhatiya",
     //designation: "",
     

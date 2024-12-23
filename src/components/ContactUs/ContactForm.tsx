@@ -62,6 +62,7 @@ const ContactForm: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
+        alert("Message sent successfully!"); 
         setResultMessage("Message sent successfully!");
         setFormData({
           name: "",

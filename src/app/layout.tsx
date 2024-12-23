@@ -23,8 +23,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PCMC Divyang Bhavan",
-  description: "PCMC Divyang Bhavan",
+  title: "PurpleJallosh",
+  description: "PurpleJallosh",
 };
 
 export default function RootLayout({

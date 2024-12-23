@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               <div className="single-footer-widget">
                 <h3>Venue Location</h3>
                 <span>
-                  <i className="icofont-calendar"></i> 17-19 January, 2025
+                  <i className="icofont-calendar"></i> 17<sup>th</sup> - 19<sup>th</sup>  January, 2025
                 </span>
 
                 <p className="location">
@@ -140,18 +140,19 @@ const Footer: React.FC = () => {
                     <Link href="/contact-us">Contact Us</Link>
                   </li>
                   <li>
-                    <Link href="#">Home</Link>
+                    <Link href="/">Home</Link>
                   </li>
                 </ul>
 
                 <p>
                   © Powered by{" "}
                   <a
-                    href="https://hibootstrap.com/"
+                    href="https://azown.in/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{color:"#fff"}}
                   >
-                    Azown Technology Pvt Ltd
+                   - Azown Technology Pvt Ltd
                   </a>
                 </p>
               </div>

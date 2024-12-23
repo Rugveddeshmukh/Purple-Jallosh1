@@ -126,6 +126,7 @@ const Navbar: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
+        alert("Form submitted successfully!"); 
         setResultMessage("Registration successful! Email sent.");
         setFormData({
           category: "",
