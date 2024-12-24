@@ -14,7 +14,7 @@ const ContactInfo: React.FC = () => {
 
             <div className="content">
               <h4>Phone / Fax</h4>
-              <p>(8600212505)</p>
+              <p>7058282890</p>
               <p></p>
               
             </div>
@@ -29,8 +29,8 @@ const ContactInfo: React.FC = () => {
 
             <div className="content">
               <h4>E-mail</h4>
-              <p>purplejallosh@pcmcdivyangbhavan.org</p>
-              
+              <p>purplejallosh</p>
+              <p>@pcmcdivyangbhavan.org</p>
             </div>
           </div>
         </div>
