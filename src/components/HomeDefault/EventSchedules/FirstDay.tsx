@@ -135,7 +135,7 @@ const FirstDay: React.FC = () => {
               <div className="col-lg-6 col-md-7">
                  <div className="location">
                   <br/>
-                  <b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}
+                  <b>Disclaimer:</b> The schedule provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}
                 </div> 
               </div>
 
@@ -175,7 +175,7 @@ const FirstDay: React.FC = () => {
                     <span>PCMC</span> Divyang Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 10:00AM - 11:00PM
+                    <i className="icofont-wall-clock"></i> 10:00AM - 11:00AM
                   </li>
                   <button
                     style={{
@@ -327,7 +327,7 @@ const FirstDay: React.FC = () => {
                     <span>PCMC</span> Divynag Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 12:00AM - 01:00PM
+                    <i className="icofont-wall-clock"></i> 12:00PM - 01:00PM
                   </li>
                   <button
                     style={{
@@ -404,7 +404,7 @@ const FirstDay: React.FC = () => {
                     <span>PCMC</span> Divynag Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 02:00AM - 03:00PM
+                    <i className="icofont-wall-clock"></i> 02:00PM - 03:00PM
                   </li>
                   <button
                     style={{
@@ -480,7 +480,7 @@ const FirstDay: React.FC = () => {
                     <span>PCMC</span> Divynag Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 03:00AM - 04:00PM
+                    <i className="icofont-wall-clock"></i> 03:00PM - 04:00PM
                   </li>
                   <button
                     style={{
@@ -557,7 +557,7 @@ const FirstDay: React.FC = () => {
                     <span>PCMC</span> Divynag Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 04:00AM - 05:00PM
+                    <i className="icofont-wall-clock"></i> 04:00PM - 05:00PM
                   </li>
                   <button
                     style={{

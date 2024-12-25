@@ -173,7 +173,7 @@ const Navbar: React.FC = () => {
       <div id="navbar" className="elkevent-nav" style={{ height: "150px", backgroundColor: "#fff", }}>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
-            <Link href="/" className="navbar-brand">
+            <Link href="https://pcmcdivyangbhavan.org" className="navbar-brand">
             <Image
                 src="/images/navlogo2.png"
                 alt="logo1"

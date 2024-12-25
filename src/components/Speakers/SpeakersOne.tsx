@@ -34,7 +34,7 @@ const SpeakersMemberData: SpeakersMember[] = [
   },
   {
     image: "/images/Manav Kambale (1).png",
-    name: "Manav Kambale",
+    name: "Manav Kamble",
     // designation: "Senior Visual Designer",
   },
   {

@@ -10,7 +10,7 @@ export default function Page() {
 
       <PageBanner
         pageTitle="Contact Us"
-        shortText="Send Us Your Message"
+        shortText=""
         homePageUrl="/"
         homePageText="Home"
         activePageText="Contact Us"

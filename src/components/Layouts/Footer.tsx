@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             {/* Left Column with Map */}
             <div style={{ flex: "1 1 300px", minWidth: "280px" }}>
               <div className="single-footer-widget">
-                <h3>Venue Location</h3>
+                <h3> Event Venue</h3>
                 <span>
                   <i className="icofont-calendar"></i> 17<sup>th</sup> - 19<sup>th</sup>  January, 2025
                 </span>

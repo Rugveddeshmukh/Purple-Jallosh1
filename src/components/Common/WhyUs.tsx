@@ -61,7 +61,7 @@ const WhyUs: React.FC = () => {
           <div className="row h-10 ">
             <div className="col-lg-6">
               <div className="about-content"style={{lineHeight:'40px'}}>
-              <span className="d-block">Diversity Inclusion</span>
+              <span className="d-block">Diversity & Inclusion</span>
               <h2>Leadership - Impact</h2>
                 
               {/*  <Link href="#" className="btn btn-secondary">

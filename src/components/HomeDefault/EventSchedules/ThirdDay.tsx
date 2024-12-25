@@ -331,7 +331,7 @@ const ThirdDay: React.FC = () => {
                     <span>PCMC</span> Divyang Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 12:00AM - 01:00PM
+                    <i className="icofont-wall-clock"></i> 12:00PM - 01:00PM
                   </li>
                   <button
                     style={{
@@ -408,7 +408,7 @@ const ThirdDay: React.FC = () => {
                     <span>PCMC</span> Divyang Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 02:00AM - 03:00PM
+                    <i className="icofont-wall-clock"></i> 02:00PM - 03:00PM
                   </li>
                   <button
                     style={{
@@ -486,7 +486,7 @@ const ThirdDay: React.FC = () => {
                     <span>PCMC</span> Divyang Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 03:00AM - 04:00PM
+                    <i className="icofont-wall-clock"></i> 03:00PM - 04:00PM
                   </li>
                   <button
                     style={{
@@ -564,7 +564,7 @@ const ThirdDay: React.FC = () => {
                     <span>PCMC</span> Divyang Bhavan Foundation
                   </li> */}
                   <li>
-                    <i className="icofont-wall-clock"></i> 04:00AM - 05:00PM
+                    <i className="icofont-wall-clock"></i> 04:00PM - 05:00PM
                   </li>
                   <button
                     style={{

@@ -10,7 +10,7 @@ export default function Page() {
 
       <PageBanner
         pageTitle="Speakers"
-        shortText="Our Team Participant!"
+        shortText=""
         homePageUrl="/"
         homePageText="Home"
         activePageText="Speakers"
