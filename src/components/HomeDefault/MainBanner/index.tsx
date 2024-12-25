@@ -172,7 +172,7 @@ const MainBanner: React.FC = () => {
                   <span   
                   >
                     <br/>
-                  <h6 style={{color:"#fff", }}> EMBRACE THE PURPLE VIBE </h6>
+                  <h6 style={{color:"#fff", }}> EMBRACE THE PURPLE VIBE !!! </h6>
                    <h2 style={{color:"#fff",}}> PURPLE JALLOSH - 2025</h2>
                   </span>
                   <br />

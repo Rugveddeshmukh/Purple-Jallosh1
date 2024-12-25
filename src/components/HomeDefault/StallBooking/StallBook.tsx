@@ -18,8 +18,8 @@ const StallBooking: React.FC = () => {
   return (
     <div className="container my-5">
       <div className="text-center" >
-        <h2 className="mb-4"> EXPO Rush   
-          <br/> Book your stall now!</h2>
+        <h2 className="mb-4"> EXPO Rush !  
+          <br/> Book your stall now !</h2>
         <div className="row justify-content-center">
 
           {/* Hall-A Link to Another Page */}

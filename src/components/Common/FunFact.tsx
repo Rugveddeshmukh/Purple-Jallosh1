@@ -10,7 +10,7 @@ const FunFactData: FunFact[] = [
   {
     iconName: "icofont-business-man",
     number: "30+",
-    text: "Corporate DE & I initiatives",
+    text: "Corporate DE & Initiatives",
   },
   {
     iconName: "icofont-rocket",

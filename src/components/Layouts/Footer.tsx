@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 <p className="location">
                   <i className="icofont-google-map"></i> Auto Cluster Exhibition
                   Center, H-Block, Chinchwad East, 181, Old Mumbai - Pune Hwy,
-                  MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019
+                  MIDC, Chinchwad, Pimpri-Chinchwad, Pune, Maharashtra 411019
                 </p>
                   <Link href="/contact-us" className="contact-authority">
                   <i className="icofont-phone"></i> Contact Us
