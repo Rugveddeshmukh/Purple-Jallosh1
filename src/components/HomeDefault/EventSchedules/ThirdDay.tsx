@@ -13,6 +13,15 @@ import {
 import emailjs from "emailjs-com";
 
 const ThirdDay: React.FC = () => {
+  const events = [
+    { time: "10:00 AM - 04:00 PM", event: "Assistive Tech Expo, Experience Zones, and Local NGO Stalls" },
+    { time: "12:00 PM - 04:00 PM", event: "Aids and Assistive Devices Distribution" },
+    { time: "12:00 PM - 04:00 PM", event: "Abilympics" },
+    { time: "01:00 PM - 02:00PM", event: "Lunch Break" },
+    { time: "01:00 PM - 03:30 PM", event: "Creative Workshops for Children with Disabilities" },
+    { time: "04:00 PM - 05:00 PM", event: "Mainstage Event: Live Music Band" },
+    { time: "05:00 PM - 06:00 PM", event: "Closing Ceremony" },
+  ];
 
   const [showForm, setShowForm] = useState(false);
   const [qrCode, setQrCode] = useState<string | null>(null); // Store QR code
@@ -106,19 +115,28 @@ const ThirdDay: React.FC = () => {
           </AccordionItemHeading>
 
           <AccordionItemPanel>
-            <li>  10:00 AM - 04:00 PM: Assistive Tech Expo, Experience Zones, and Local NGO Stalls</li>
-            <li>	12:00 AM - 04:00 PM: Aids and Assistive Devices Distribution</li>
-            <li>	12:00 AM - 04:00 PM: Abilympics</li>
-            <li>  01:00 AM - 02:00 PM: Lunch Break</li>
-            <li>	01:00 AM - 03:30 PM: Creative Workshops for Children with Disabilities</li>
-            <li>	04:00 PM - 05:00 PM: Mainstage Event: Live Music Band</li>
-            <li>	05:00 PM - 06:00 PM: Closing Ceremony</li>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Time</th>
+              <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+             {events.map((item, index) => (
+              <tr key={index}>
+                <td>{item.time}</td>
+                <td>{item.event}</td>
+              </tr>
+             ))}
+           </tbody>
+          </table>
             
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
                 <div className="location">
                 <br/>
-                <b>Disclaimer:</b> The schedules provided are tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}
+                <b>Disclaimer:</b> The schedule provided is tentative and subject to change. The event host reserves all rights to make adjustments if necessary.{" "}
                 </div>
               </div>
 

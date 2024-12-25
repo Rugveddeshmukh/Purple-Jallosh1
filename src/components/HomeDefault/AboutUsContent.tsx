@@ -12,7 +12,7 @@ const AboutUsContent: React.FC = () => {
               <div className="about-content"style={{lineHeight:'30px'}}>
                 <span>Experience The Event</span>
                 <h2>
-               <b>What is</b> Purple Jallosh
+               <b>What is</b> Purple Jallosh?
                 </h2>
 
                 <p><i>Purple Jallosh is More than just an Event; its a Movement</i> <br/> <br/>

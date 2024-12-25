@@ -1,7 +1,7 @@
 import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
 import AboutUsContent from "@/components/AboutUs/AboutUsContent";
-import AboutUsContentmore from "@/components/AboutUs/AboutUsContentmore";
+
 //import WhyUs from "@/components/Common/WhyUs";
 //import Speakers from "@/components/Common/Speakers";
 //import Cta from "@/components/Common/Cta";
@@ -27,7 +27,7 @@ export default function Page() {
       />
 
       <AboutUsContent />
-      <AboutUsContentmore/>
+      
 
 
      {/* <WhyUs /> */}

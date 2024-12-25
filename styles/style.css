@@ -229,11 +229,14 @@ label {
   font-size: 16px;
   text-transform: uppercase;
   display: block;
+  font-weight: bold;
+
 }
 .section-title h2 {
   font-size: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+  
 }
 .section-title h2 b {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, # 80%);
@@ -1002,7 +1005,7 @@ About CSS
   font-weight: bold;
 }
 .about-content h2 {
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 10px;
   margin-bottom: 25px;
 }

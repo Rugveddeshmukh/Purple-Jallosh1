@@ -13,6 +13,16 @@ import Image from "next/image";
 
 
 const FirstDay: React.FC = () => {
+  const events = [
+    { time: "10:00 AM - 11:00 AM", event: "Opening Ceremony" },
+    { time: "11:00 AM - 05:00 PM", event: "Assistive Tech Expo and Experience Zones" },
+    { time: "11:00 AM - 05:00 PM", event: "Local NGO Stalls and Jagruti Mela" },
+    { time: "12:00 PM - 04:00 PM", event: "Aids and Assistive Devices Distribution" },
+    { time: "01:00 PM - 02:00 PM", event: "Lunch Break" },
+    { time: "01:00 PM - 05:00PM", event: "Creative Workshops for Children with Disabilities" },
+    { time: "02:00 PM - 03:30 PM", event: "Panel Discussions" },
+    { time: "05:00 PM - 06:00 PM", event: "Special School Performances" },
+  ];
   const [showForm, setShowForm] = useState(false);
   const [qrCode, setQrCode] = useState<string | null>(null); // Store QR code
 
@@ -105,15 +115,22 @@ const FirstDay: React.FC = () => {
           </AccordionItemHeading>
 
           <AccordionItemPanel >
-            <li >	10:00 AM - 11:00 AM:  Opening Ceremony </li>
-            <li >	11:00 AM - 05:00 PM:  Assistive Tech Expo and Experience Zones</li>
-            <li >	11:00 AM - 05:00 PM:  Local NGO Stalls and Jagruti Mela</li>
-            <li >	12:00 AM - 04:00 PM:  Aids and Assistive Devices Distribution</li>
-            <li >	01:00 PM - 02:00 PM:  Lunch Break</li>
-            <li >	01:00 AM - 05:00 PM:  Creative Workshops for Children with Disabilities</li>
-            <li >	02:00 AM - 03:30 PM:  Panel Discussions</li>
-            <li >	05:00 PM - 06:00 PM:  Special School Performancess</li>
-            
+          <table className="table">
+            <thead>
+             <tr>
+             <th>Time</th>
+             <th>Event</th>
+            </tr>
+            </thead>
+           <tbody>
+           {events.map((item, index) => (
+            <tr key={index}>
+              <td>{item.time}</td>
+              <td>{item.event}</td>
+            </tr>
+             ))}
+           </tbody>
+           </table>
             <div className="row h-100 align-items-center">
               <div className="col-lg-6 col-md-7">
                  <div className="location">
@@ -170,7 +187,7 @@ const FirstDay: React.FC = () => {
                       textAlign: "center",
                       fontWeight: "bold",
                       color: "white",
-                      cursor: bookingLimitActivity1 > 0 ? "pointer" : "not-allowed",
+                      cursor: bookingLimitActivity1 > 0 ? "pointer" : "not-allowed",  
                     }}
                     onClick={() => {
                       if (bookingLimitActivity1 > 0) {

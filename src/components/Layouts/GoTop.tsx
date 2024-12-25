@@ -18,7 +18,7 @@ const GoTop: React.FC = () => {
 
   const openWhatsApp = () => {
     const phoneNumber = "7058282890"; // Replace with your WhatsApp number
-    const message = "Thank you for reaching out to Purple Jallosh. How can we assist you today?";
+    const message = "";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 

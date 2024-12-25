@@ -56,10 +56,42 @@ const WhyUs: React.FC = () => {
 
   return (
     <>
-        <div className="section-title ms-lg-5 ms-md-3 ms-2">
-            <span className="d-block">Diversity Inclusion</span>
-            <h2>Leadership - Impact</h2>
+        <div className="about-area ptb-80 ">
+        <div className="container">
+          <div className="row h-10 ">
+            <div className="col-lg-6">
+              <div className="about-content"style={{lineHeight:'40px'}}>
+              <span className="d-block">Diversity Inclusion</span>
+              <h2>Leadership - Impact</h2>
+                
+              {/*  <Link href="#" className="btn btn-secondary">
+                  Register Now
+                </Link> */}
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="about-image">
+             
+                {/* <Image
+                  src="/images/Whatsimg2.jpg"
+                  className="about-img2"
+                  alt="about"
+                  width={309}
+                  height={424}
+                /> */}
+      
+
+               {/* <Link href="/" className="btn btn-primary">
+                  Explore More About
+                </Link>*/}
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+
        <div className="bar"></div>
       <div className="why-choose-us">
       
